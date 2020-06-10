@@ -1,5 +1,5 @@
 # VL.IO.TCP
-Set of nodes to use run a webserver from VL.
+Set of nodes to use TCP in VL.  
 Based on the excellent .NET library [SimpleTcp](https://github.com/jchristn/SimpleTcp)
 
 Try it with vvvv, the visual live-programming environment for .NET  
