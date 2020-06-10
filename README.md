@@ -10,6 +10,6 @@ In order to use this library with VL you have to install the nuget that is avail
 
     nuget install VL.IO.TCP -pre
 
-Once the nuget is installed and referenced in your VL document you'll see the category "HTTP" under "IO" in the nodebrowser. 
+Once the nuget is installed and referenced in your VL document you'll see the category "TCP" under "IO" in the nodebrowser. 
 
 Demos are available via the Help Browser!
