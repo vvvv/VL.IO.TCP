@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="CkPiUuEN7ZvQMFB6F581kf" LanguageVersion="2020.1.3.147" Version="0.128">
-  <NugetDependency Id="EZUnema5doTP51SeSqBc43" Location="VL.CoreLib" Version="2020.1.3" />
+<Document xmlns:p="property" Id="CkPiUuEN7ZvQMFB6F581kf" LanguageVersion="2020.2.2.281" Version="0.128">
+  <NugetDependency Id="EZUnema5doTP51SeSqBc43" Location="VL.CoreLib" Version="2020.2.2" />
   <Patch Id="DRdtZLOOVdjMBJH8Giq9e8">
     <Canvas Id="JQWM12ukQLfMW8RnQD04JR" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -78,7 +78,7 @@
               <Choice Kind="TypeFlag" Name="Boolean" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="DUaDelZJWVwNmWwvYxKkpU" Comment="Clients" Bounds="761,341,101,49" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="DUaDelZJWVwNmWwvYxKkpU" Comment="Clients" Bounds="761,341,91,34" ShowValueBox="true" isIOBox="true" />
           <Node Bounds="180,546,63,19" Id="Eh7gNlCo3kvNplMM81Ym7t">
             <p:NodeReference LastCategoryFullName="Primitive.String" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
@@ -89,7 +89,7 @@
             <Pin Id="HzQrlySLTXmLaUUmGcOXKZ" Name="Encoding" Kind="InputPin" />
             <Pin Id="AuMFosXfO0FLxK48DsWjTq" Name="Result" Kind="OutputPin" />
           </Node>
-          <Pad Id="PRsn66POOcGP4PzDb6VRFm" Comment="" Bounds="177,642,35,15" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="PRsn66POOcGP4PzDb6VRFm" Comment="" Bounds="185,637,35,15" ShowValueBox="true" isIOBox="true" />
           <Node Bounds="710,446,118,175" Id="LGX2kMGYjXNLTY5NBzQ0eF">
             <p:NodeReference LastCategoryFullName="Reactive" LastSymbolSource="VL.Reactive.vl">
               <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
@@ -150,7 +150,7 @@
             </p:ValueBoxSettings>
           </Pad>
           <Node Bounds="40,441,99,80" Id="TFaZfKhqHOCP37caRxAczi">
-            <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+            <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.dll">
               <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
               <Choice Kind="ApplicationStatefulRegion" Name="If" />
               <CategoryReference Kind="Category" Name="Primitive" />
@@ -216,6 +216,6 @@
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="VJ8q0V1Ren4LEKcNoHypfb" Location="VL.Skia" Version="2020.1.3" />
+  <NugetDependency Id="VJ8q0V1Ren4LEKcNoHypfb" Location="VL.Skia" Version="2020.2.2" />
   <NugetDependency Id="I8fpicrno0aLmIEDbdmERY" Location="VL.IO.TCP" Version="0.0.0.0" />
 </Document>
