@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="CkPiUuEN7ZvQMFB6F581kf" LanguageVersion="2021.4.9.953" Version="0.128">
-  <NugetDependency Id="EZUnema5doTP51SeSqBc43" Location="VL.CoreLib" Version="2021.4.9-0953-gbf5123ac82" />
+<Document xmlns:p="property" Id="CkPiUuEN7ZvQMFB6F581kf" LanguageVersion="2021.4.9.957" Version="0.128">
+  <NugetDependency Id="EZUnema5doTP51SeSqBc43" Location="VL.CoreLib" Version="2021.4.9-0957-gacfca0d7b9" />
   <Patch Id="DRdtZLOOVdjMBJH8Giq9e8">
     <Canvas Id="JQWM12ukQLfMW8RnQD04JR" DefaultCategory="Main" CanvasType="FullCategory" />
     <!--
@@ -78,12 +78,10 @@
             </p:TypeAnnotation>
           </Pad>
           <Node Bounds="278,399,86,19" Id="G7IC1EzH0XsOeFwPdEE8U0">
-            <p:NodeReference LastCategoryFullName="IO.TCP" LastSymbolSource="VL.IO.TCP.vl">
+            <p:NodeReference LastCategoryFullName="IO" LastSymbolSource="VL.Tokenizer.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="ReadStringUntil" />
-              <CategoryReference Kind="Category" Name="TCP" NeedsToBeDirectParent="true" />
             </p:NodeReference>
-            <p:HelpFocus p:Assembly="VL.Lang" p:Type="VL.Model.HelpPriority">High</p:HelpFocus>
             <Pin Id="TyucdEIGmCdOJcQsokZyCy" Name="Input" Kind="InputPin" />
             <Pin Id="DpPLZXNs7EMPSQqeMbKeoU" Name="Terminator" Kind="InputPin" />
             <Pin Id="IUDCsnrBpoxNRfaFTYZRXc" Name="Encoding" Kind="InputPin" />
@@ -91,12 +89,10 @@
             <Pin Id="HjPM5ZFGueHMlrtjMFhEiS" Name="On Data" Kind="OutputPin" />
           </Node>
           <Node Bounds="278,579,86,19" Id="ShbH6J5FMocOPuGrXl1NA2">
-            <p:NodeReference LastCategoryFullName="IO.TCP" LastSymbolSource="VL.IO.TCP.vl">
+            <p:NodeReference LastCategoryFullName="IO" LastSymbolSource="VL.Tokenizer.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="ReadStringUntil (Queued)" />
-              <CategoryReference Kind="Category" Name="TCP" NeedsToBeDirectParent="true" />
             </p:NodeReference>
-            <p:HelpFocus p:Assembly="VL.Lang" p:Type="VL.Model.HelpPriority">High</p:HelpFocus>
             <Pin Id="KFykRGkD1TwOM1id4kKAAe" Name="Input" Kind="InputPin" />
             <Pin Id="QSQpTVpcQj6O1T4ggAhzok" Name="Terminator" Kind="InputPin" />
             <Pin Id="DR2AH9ydTwEOVje8FERJTS" Name="Encoding" Kind="InputPin" />
@@ -114,12 +110,10 @@
             </p:ValueBoxSettings>
           </Pad>
           <Node Bounds="278,699,86,19" Id="OBmfzMzNyxTOXF9GvqU5ev">
-            <p:NodeReference LastCategoryFullName="IO.TCP" LastSymbolSource="VL.IO.TCP.vl">
+            <p:NodeReference LastCategoryFullName="IO" LastSymbolSource="VL.Tokenizer.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="ReadStringUntil (Reactive)" />
-              <CategoryReference Kind="Category" Name="TCP" NeedsToBeDirectParent="true" />
             </p:NodeReference>
-            <p:HelpFocus p:Assembly="VL.Lang" p:Type="VL.Model.HelpPriority">High</p:HelpFocus>
             <Pin Id="CUWXOCsmgWnLqPwEeNJeNQ" Name="Input" Kind="InputPin" />
             <Pin Id="Ua9SDfVDo4ELWyTJAUaQsP" Name="Terminator" Kind="InputPin" />
             <Pin Id="NTKvWbKXphcN6ABMUweXmY" Name="Encoding" Kind="InputPin" />
@@ -231,10 +225,9 @@
             </p:ValueBoxSettings>
           </Pad>
           <Node Bounds="929,405,86,19" Id="JrYdj9nw6DSLwnb8m6OHX0">
-            <p:NodeReference LastCategoryFullName="IO.TCP" LastSymbolSource="VL.IO.TCP.vl">
+            <p:NodeReference LastCategoryFullName="IO" LastSymbolSource="VL.Tokenizer.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="ReadStringUntil" />
-              <CategoryReference Kind="Category" Name="TCP" NeedsToBeDirectParent="true" />
             </p:NodeReference>
             <Pin Id="CTn3Zvv9EuwOfF5hPOzUqa" Name="Input" Kind="InputPin" />
             <Pin Id="Nty5KHcL7T4PSenaUKzNGB" Name="Terminator" Kind="InputPin" />
@@ -313,6 +306,6 @@
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="VJ8q0V1Ren4LEKcNoHypfb" Location="VL.Skia" Version="2021.4.9-0953-gbf5123ac82" />
+  <NugetDependency Id="VJ8q0V1Ren4LEKcNoHypfb" Location="VL.Skia" Version="2021.4.9-0957-gacfca0d7b9" />
   <NugetDependency Id="I8fpicrno0aLmIEDbdmERY" Location="VL.IO.TCP" Version="0.0.0.0" />
 </Document>
