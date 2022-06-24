@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="CkPiUuEN7ZvQMFB6F581kf" LanguageVersion="2021.4.9.957" Version="0.128">
-  <NugetDependency Id="EZUnema5doTP51SeSqBc43" Location="VL.CoreLib" Version="2021.4.9-0957-gacfca0d7b9" />
+<Document xmlns:p="property" Id="CkPiUuEN7ZvQMFB6F581kf" LanguageVersion="2021.4.9.982" Version="0.128">
+  <NugetDependency Id="EZUnema5doTP51SeSqBc43" Location="VL.CoreLib" Version="2021.4.9" />
   <Patch Id="DRdtZLOOVdjMBJH8Giq9e8">
     <Canvas Id="JQWM12ukQLfMW8RnQD04JR" DefaultCategory="Main" CanvasType="FullCategory" />
     <!--
@@ -80,18 +80,20 @@
           <Node Bounds="278,399,86,19" Id="G7IC1EzH0XsOeFwPdEE8U0">
             <p:NodeReference LastCategoryFullName="IO" LastSymbolSource="VL.Tokenizer.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="ProcessAppFlag" Name="ReadStringUntil" />
+              <Choice Kind="ProcessAppFlag" Name="StringReceiver" />
             </p:NodeReference>
             <Pin Id="TyucdEIGmCdOJcQsokZyCy" Name="Input" Kind="InputPin" />
             <Pin Id="DpPLZXNs7EMPSQqeMbKeoU" Name="Terminator" Kind="InputPin" />
             <Pin Id="IUDCsnrBpoxNRfaFTYZRXc" Name="Encoding" Kind="InputPin" />
+            <Pin Id="A2e0GOrsegGPs41pctd2u8" Name="Reset" Kind="InputPin" />
             <Pin Id="FAlG4aGZzdZMzEKCb6E0wz" Name="Result" Kind="OutputPin" />
             <Pin Id="HjPM5ZFGueHMlrtjMFhEiS" Name="On Data" Kind="OutputPin" />
+            <Pin Id="Q3nb8pBNqChOiMa7dFNJPM" Name="Buffer Size" Kind="OutputPin" />
           </Node>
           <Node Bounds="278,579,86,19" Id="ShbH6J5FMocOPuGrXl1NA2">
             <p:NodeReference LastCategoryFullName="IO" LastSymbolSource="VL.Tokenizer.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="ProcessAppFlag" Name="ReadStringUntil (Queued)" />
+              <Choice Kind="ProcessAppFlag" Name="StringReceiver (Queued)" />
             </p:NodeReference>
             <Pin Id="KFykRGkD1TwOM1id4kKAAe" Name="Input" Kind="InputPin" />
             <Pin Id="QSQpTVpcQj6O1T4ggAhzok" Name="Terminator" Kind="InputPin" />
@@ -99,6 +101,7 @@
             <Pin Id="NfuFpgzEtwqLn41urY9O1c" Name="Clear Queue" Kind="InputPin" />
             <Pin Id="QEOh6BrOdG7OtTXRKdKg5y" Name="Result" Kind="OutputPin" />
             <Pin Id="M7iPSuCrr4APleyrbkjugP" Name="Queue Length" Kind="OutputPin" />
+            <Pin Id="VAR8xfGzAAcNGKr9l70HT5" Name="Buffer Size" Kind="OutputPin" />
           </Node>
           <Pad Id="L3lPQIE1yKBP9dR8hAOC9R" Bounds="383,587,159,19" ShowValueBox="true" isIOBox="true" Value="ReadStringUntil (Queued)">
             <p:TypeAnnotation>
@@ -112,12 +115,14 @@
           <Node Bounds="278,699,86,19" Id="OBmfzMzNyxTOXF9GvqU5ev">
             <p:NodeReference LastCategoryFullName="IO" LastSymbolSource="VL.Tokenizer.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="ProcessAppFlag" Name="ReadStringUntil (Reactive)" />
+              <Choice Kind="ProcessAppFlag" Name="StringReceiver (Reactive)" />
             </p:NodeReference>
             <Pin Id="CUWXOCsmgWnLqPwEeNJeNQ" Name="Input" Kind="InputPin" />
             <Pin Id="Ua9SDfVDo4ELWyTJAUaQsP" Name="Terminator" Kind="InputPin" />
             <Pin Id="NTKvWbKXphcN6ABMUweXmY" Name="Encoding" Kind="InputPin" />
+            <Pin Id="MsQtvIkKHpPLddy86HNUy3" Name="Reset" Kind="InputPin" />
             <Pin Id="EwagmI7ZTvzPrjAfFIFVoi" Name="Output" Kind="OutputPin" />
+            <Pin Id="TyZ8xXYeU50MWshmdHhBqo" Name="Buffer Size" Kind="OutputPin" />
           </Node>
           <Pad Id="EMiiHat4OvgLYXgtXc0uFx" Bounds="383,705,229,19" ShowValueBox="true" isIOBox="true" Value="ReadStringUntil (Reactive): Advanced">
             <p:TypeAnnotation>
@@ -227,13 +232,15 @@
           <Node Bounds="929,405,86,19" Id="JrYdj9nw6DSLwnb8m6OHX0">
             <p:NodeReference LastCategoryFullName="IO" LastSymbolSource="VL.Tokenizer.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="ProcessAppFlag" Name="ReadStringUntil" />
+              <Choice Kind="ProcessAppFlag" Name="StringReceiver" />
             </p:NodeReference>
             <Pin Id="CTn3Zvv9EuwOfF5hPOzUqa" Name="Input" Kind="InputPin" />
             <Pin Id="Nty5KHcL7T4PSenaUKzNGB" Name="Terminator" Kind="InputPin" />
             <Pin Id="Q6dQJOtPPE1O72aYTeviTG" Name="Encoding" Kind="InputPin" />
+            <Pin Id="V6VbwDXJfGTPJEny9fG2RO" Name="Reset" Kind="InputPin" />
             <Pin Id="El7WHy7CFpfNnvhilxPfEY" Name="Result" Kind="OutputPin" />
             <Pin Id="Fj9jeFKHYtzPA5P2Sgpybe" Name="On Data" Kind="OutputPin" />
+            <Pin Id="O32Gimhtc3aM6itZWPDTdJ" Name="Buffer Size" Kind="OutputPin" />
           </Node>
           <Pad Id="Sv5xpkqhHR3QbADyQHtyDk" Comment="" Bounds="931,451,83,16" ShowValueBox="true" isIOBox="true" />
           <Pad Id="CGQWXd3t0yuPbupjSqtA8H" Comment="On Data" Bounds="1032,449,35,35" ShowValueBox="true" isIOBox="true" />
@@ -306,6 +313,6 @@
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="VJ8q0V1Ren4LEKcNoHypfb" Location="VL.Skia" Version="2021.4.9-0957-gacfca0d7b9" />
+  <NugetDependency Id="VJ8q0V1Ren4LEKcNoHypfb" Location="VL.Skia" Version="2021.4.9" />
   <NugetDependency Id="I8fpicrno0aLmIEDbdmERY" Location="VL.IO.TCP" Version="0.0.0.0" />
 </Document>

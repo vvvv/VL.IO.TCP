@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="PPQbVCgo8ARQHkWQDH7CES" LanguageVersion="2021.4.9.957" Version="0.128">
-  <NugetDependency Id="EZUnema5doTP51SeSqBc43" Location="VL.CoreLib" Version="2021.4.9-0957-gacfca0d7b9" />
+<Document xmlns:p="property" Id="PPQbVCgo8ARQHkWQDH7CES" LanguageVersion="2021.4.9.982" Version="0.128">
+  <NugetDependency Id="EZUnema5doTP51SeSqBc43" Location="VL.CoreLib" Version="2021.4.9" />
   <Patch Id="DRdtZLOOVdjMBJH8Giq9e8">
     <Canvas Id="JQWM12ukQLfMW8RnQD04JR" DefaultCategory="Main" CanvasType="FullCategory" />
     <!--
@@ -163,13 +163,15 @@
           <Node Bounds="334,499,86,19" Id="U6D5uv6Cs9lQNYfYu1b4B8">
             <p:NodeReference LastCategoryFullName="IO" LastSymbolSource="VL.Tokenizer.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="ProcessAppFlag" Name="ReadStringUntil" />
+              <Choice Kind="ProcessAppFlag" Name="StringReceiver" />
             </p:NodeReference>
             <Pin Id="T8MQESz7E2HOTLfE9K718W" Name="Input" Kind="InputPin" />
             <Pin Id="MdYi3DRulj1PM1x9p8rDba" Name="Terminator" Kind="InputPin" />
             <Pin Id="NAldPx9m7rrOj1MQclrhWs" Name="Encoding" Kind="InputPin" />
+            <Pin Id="OydfNpCUmW8PEPdZrzpJW6" Name="Reset" Kind="InputPin" />
             <Pin Id="UIPAf9Bpjw0ODrOuPyqIDu" Name="Result" Kind="OutputPin" />
             <Pin Id="MtllmX8P6c2NNvMOqogjyq" Name="On Data" Kind="OutputPin" />
+            <Pin Id="KTfBGgCfNcpQZcVbVbYxAe" Name="Buffer Size" Kind="OutputPin" />
           </Node>
           <Pad Id="IWFimJXlAO3N0YIFaoMNOF" Comment="" Bounds="336,539,56,5" ShowValueBox="true" isIOBox="true" />
         </Canvas>
@@ -204,6 +206,6 @@
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="VJ8q0V1Ren4LEKcNoHypfb" Location="VL.Skia" Version="2021.4.9-0957-gacfca0d7b9" />
+  <NugetDependency Id="VJ8q0V1Ren4LEKcNoHypfb" Location="VL.Skia" Version="2021.4.9" />
   <NugetDependency Id="I8fpicrno0aLmIEDbdmERY" Location="VL.IO.TCP" Version="0.0.0.0" />
 </Document>
