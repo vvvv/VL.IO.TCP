@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="PPQbVCgo8ARQHkWQDH7CES" LanguageVersion="2021.4.9.953" Version="0.128">
-  <NugetDependency Id="EZUnema5doTP51SeSqBc43" Location="VL.CoreLib" Version="2021.4.9-0953-gbf5123ac82" />
+<Document xmlns:p="property" Id="PPQbVCgo8ARQHkWQDH7CES" LanguageVersion="2021.4.10.1012" Version="0.128">
+  <NugetDependency Id="EZUnema5doTP51SeSqBc43" Location="VL.CoreLib" Version="2021.4.10-1007-g66c84f8e50" />
   <Patch Id="DRdtZLOOVdjMBJH8Giq9e8">
     <Canvas Id="JQWM12ukQLfMW8RnQD04JR" DefaultCategory="Main" CanvasType="FullCategory" />
     <!--
@@ -96,6 +96,7 @@
                 <Pin Id="BKGS890ToTMOiBsSPNBUkL" Name="Length Big Endian" Kind="InputPin" />
                 <Pin Id="T1xtLS33HOMQRezvE8Q4dE" Name="Reset" Kind="InputPin" />
                 <Pin Id="OpkrvKkkRkuNusxmsyumrG" Name="Result" Kind="OutputPin" />
+                <Pin Id="PMC0552pnzSOI99Jqy6L7j" Name="Buffer Size" Kind="OutputPin" />
                 <Pin Id="TuHJgAxm1IoLqpfiQs01BX" Name="Status" Kind="OutputPin" />
               </Node>
               <Node Bounds="620,483,107,117" Id="LiRICamiQaqM38cSSXwUvF">
@@ -143,7 +144,7 @@
               </Node>
             </Patch>
           </Node>
-          <Pad Id="ThnpSvOVIkYNSaRr1xr3Ap" Comment="Send" Bounds="205,491,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+          <Pad Id="ThnpSvOVIkYNSaRr1xr3Ap" Comment="Send" Bounds="205,461,35,35" ShowValueBox="true" isIOBox="true" Value="False">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="Boolean" />
             </p:TypeAnnotation>
@@ -162,7 +163,7 @@
               <Choice Kind="TypeFlag" Name="Integer32" />
             </p:TypeAnnotation>
           </Pad>
-          <Node Bounds="149,534,59,26" Id="OisovxwqRoHQcLjDUhHdfV">
+          <Node Bounds="149,504,59,26" Id="OisovxwqRoHQcLjDUhHdfV">
             <p:NodeReference LastCategoryFullName="IO.TCP.TCPClient" LastSymbolSource="VL.IO.TCP.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <CategoryReference Kind="ClassType" Name="TCPClient" NeedsToBeDirectParent="true" />
@@ -201,15 +202,6 @@
             <Pin Id="FD12KtdwvJvPKJmkOD7sqs" Name="Big Endian" Kind="InputPin" />
             <Pin Id="NuLeDnjcabnQav8SeSeoo7" Name="Byte Count" Kind="InputPin" />
             <Pin Id="KfMxEZuQQmMMBt3RvSIkzK" Name="Result" Kind="OutputPin" />
-          </Node>
-          <Node Bounds="176,446,83,26" Id="TX1gFv3XNtYLMfzbjxc4aU">
-            <p:NodeReference LastCategoryFullName="Collections.Mutable.MutableArray" LastSymbolSource="VL.Collections.vl">
-              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="OperationCallFlag" Name="FromSequence" />
-              <CategoryReference Kind="ArrayType" Name="MutableArray" NeedsToBeDirectParent="true" />
-            </p:NodeReference>
-            <Pin Id="CTX8KnnNOvCQcFumakHhBx" Name="Input" Kind="StateInputPin" />
-            <Pin Id="GD47IG0ynZ1PZfi3XgFh2T" Name="Result" Kind="OutputPin" />
           </Node>
           <Node Bounds="564,701,65,19" Id="GPjuVsJyklAQHiEceZwaCz">
             <p:NodeReference LastCategoryFullName="Reactive" LastSymbolSource="VL.Reactive.vl">
@@ -256,8 +248,6 @@
         <Link Id="A3mN6U094v1LleGxW93SOW" Ids="ThnpSvOVIkYNSaRr1xr3Ap,RomOuXOs2maNVIVzBHadYX" />
         <Link Id="N1qcNnNUj2dOKLgqEF2Ner" Ids="QHSstv9bt60PRl6IKClaDC,FVMRBd97dgBO0dxQXqDpf3" />
         <Link Id="BJYHJo6gizNOir8beo8di8" Ids="GvALE41w0VWQXiL7VT4Njk,CuQ7hOuJTekQUiMKgIGttW" />
-        <Link Id="LiuAshL3EWONYKyRlBnNvA" Ids="KfMxEZuQQmMMBt3RvSIkzK,CTX8KnnNOvCQcFumakHhBx" />
-        <Link Id="O8lxBIzxrZnPkt6EsTwyPH" Ids="GD47IG0ynZ1PZfi3XgFh2T,SejiJMYkbPfL3om1e3wsEO" />
         <Link Id="TEIwKDHM6h4NXdaGMbk2nk" Ids="EpJDAoLfia0NdN5ASMV6i3,LJx54lxrAfrNVgUeFG4sAC" />
         <Link Id="IYxf6ioqYQVLIKXf6qYzYN" Ids="OpkrvKkkRkuNusxmsyumrG,RbuMP8yjM04LzYzyGl2rZr" />
         <Link Id="Vwti1an6sIGQIC7pv5uMSF" Ids="RbuMP8yjM04LzYzyGl2rZr,MaciHLba6VDM6PtymjlUxv" />
@@ -269,9 +259,10 @@
         <Link Id="QShn3bl4R8KPS0UdkjSY4y" Ids="NAJOSyVevgrMyMS1JWkgXy,FQAI1KhsL7kNxWWfG2sNHh" />
         <Link Id="VbMcjuyQHfMOlbe0PRo3hL" Ids="FQAI1KhsL7kNxWWfG2sNHh,RsBTxhjcbk0MfgmYB07tRD" />
         <Link Id="N1MUGLoZQNDMXRP7tCpVqb" Ids="IPRf7ePb9f5NWQE4LMloMj,RgOSwzCkmpeQQ6RUHTiNIe" />
+        <Link Id="Lh5K9TOXtjLLwJW4UKmdpL" Ids="KfMxEZuQQmMMBt3RvSIkzK,SejiJMYkbPfL3om1e3wsEO" />
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="VJ8q0V1Ren4LEKcNoHypfb" Location="VL.Skia" Version="2021.4.9-0953-gbf5123ac82" />
+  <NugetDependency Id="VJ8q0V1Ren4LEKcNoHypfb" Location="VL.Skia" Version="2021.4.10-1007-g66c84f8e50" />
   <NugetDependency Id="I8fpicrno0aLmIEDbdmERY" Location="VL.IO.TCP" Version="0.0.0.0" />
 </Document>

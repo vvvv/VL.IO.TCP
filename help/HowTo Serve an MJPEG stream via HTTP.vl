@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="CkPiUuEN7ZvQMFB6F581kf" LanguageVersion="2020.1.3.147" Version="0.128">
-  <NugetDependency Id="EZUnema5doTP51SeSqBc43" Location="VL.CoreLib" Version="2020.1.3" />
+<Document xmlns:p="property" Id="CkPiUuEN7ZvQMFB6F581kf" LanguageVersion="2021.4.10.1012" Version="0.128">
+  <NugetDependency Id="EZUnema5doTP51SeSqBc43" Location="VL.CoreLib" Version="2021.4.10-1007-g66c84f8e50" />
   <Patch Id="DRdtZLOOVdjMBJH8Giq9e8">
     <Canvas Id="JQWM12ukQLfMW8RnQD04JR" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -22,11 +22,7 @@
               <CategoryReference Kind="Category" Name="TCP" NeedsToBeDirectParent="true" />
             </p:NodeReference>
             <Pin Id="UfyzmRMNtN1Nhol25rn2Xa" Name="Listener IP" Kind="InputPin" />
-            <Pin Id="JbIpsk8M2AWNRI5r1Gdspy" Name="Port" Kind="InputPin">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Integer32" />
-              </p:TypeAnnotation>
-            </Pin>
+            <Pin Id="JbIpsk8M2AWNRI5r1Gdspy" Name="Port" Kind="InputPin" />
             <Pin Id="C86oFf0UIl5Nl6C9mhGJPT" Name="Enabled" Kind="InputPin" />
             <Pin Id="S8NL6VRO9WEMOm6lbIZeGA" Name="Output" Kind="StateOutputPin" />
             <Pin Id="Mj0ljQULWLjQTVBqEoNZ9n" Name="Data" Kind="OutputPin" />
@@ -121,21 +117,23 @@
             </p:NodeReference>
             <Pin Id="SA2QezepadoQJV8UFvvOXw" Name="Layer" Kind="InputPin" />
             <Pin Id="HsD7OOvcKX5OtdQ8e0jwIb" Name="Color" Kind="InputPin" />
-            <Pin Id="AbrtTQOqnT7OyuslyPbcGq" Name="Mouse" Kind="InputPin" />
-            <Pin Id="C92xIxidmprQawYe7Qjvys" Name="Keyboard" Kind="InputPin" />
+            <Pin Id="CLc0tcdt7ZnPnfAJUfrdyJ" Name="Clear" Kind="InputPin" />
             <Pin Id="IXHHc9XRuDLMFK1Lj945ZF" Name="Space" Kind="InputPin" />
             <Pin Id="TdHEVB0N8u4NDTE9pT596k" Name="Width" Kind="InputPin" />
             <Pin Id="HhWgnu14S7fMaN0nfFY5qz" Name="Height" Kind="InputPin" />
+            <Pin Id="AbrtTQOqnT7OyuslyPbcGq" Name="Mouse" Kind="InputPin" />
+            <Pin Id="C92xIxidmprQawYe7Qjvys" Name="Keyboard" Kind="InputPin" />
             <Pin Id="VZbaY3N1EIAPO1kuyACWuE" Name="Enabled" Kind="InputPin" />
             <Pin Id="MhbmwODPz3vPBp8J6CQFG7" Name="Result" Kind="OutputPin" />
           </Node>
           <Node Bounds="196,737,105,86" Id="G2eHGJW9zdaMqkXRjqLXSH">
-            <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+            <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.dll">
               <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
               <Choice Kind="ApplicationStatefulRegion" Name="ForEach" />
               <CategoryReference Kind="Category" Name="Primitive" />
             </p:NodeReference>
             <Pin Id="SZ8wwFKsaZwMQj2ssSKXoc" Name="Break" Kind="OutputPin" />
+            <ControlPoint Id="RncylZofK3qLZGZDJmpklm" Bounds="248,743" Alignment="Top" />
             <Patch Id="KXs6W77blwbL2oYrciP1h6" ManuallySortedPins="true">
               <Patch Id="MQfToYZg2aXNGqvpaP9dXl" Name="Create" ManuallySortedPins="true" />
               <Patch Id="K5dht4mnIiKNnhhdU7coDo" Name="Update" ManuallySortedPins="true" />
@@ -148,15 +146,11 @@
                 </p:NodeReference>
                 <Pin Id="QQSac9jCouGPRg7HiG4ta0" Name="Input" Kind="StateInputPin" />
                 <Pin Id="RtLnPpnyV5oPr42m6qW5n7" Name="Client" Kind="InputPin" />
-                <Pin Id="GufiydNL6c9OOgNBHnao5H" Name="Data" Kind="InputPin">
-                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                    <Choice Kind="TypeFlag" Name="String" />
-                  </p:TypeAnnotation>
-                </Pin>
+                <Pin Id="GufiydNL6c9OOgNBHnao5H" Name="Data" Kind="InputPin" />
+                <Pin Id="Heb4qNPWbf8O8GxnQ8PFSX" Name="Apply" Kind="InputPin" />
                 <Pin Id="EilQ2GE6le9OtnfbZCY9ba" Name="Output" Kind="StateOutputPin" />
               </Node>
             </Patch>
-            <ControlPoint Id="RncylZofK3qLZGZDJmpklm" Bounds="248,743" Alignment="Top" />
           </Node>
           <Pad Id="AzJ3Pxar1hJMSm1IjR7l9r" Bounds="490,368" />
           <Pad Id="QUlkuND4czyMszL61VaiiY" Bounds="136,196,155,20" ShowValueBox="true" isIOBox="true" Value="http://127.0.0.1:2800">
@@ -178,7 +172,7 @@
             <Pin Id="FETjwSBE7VbPSYlFCLr4cu" Name="Result" Kind="OutputPin" />
           </Node>
           <Node Bounds="476,603,147,144" Id="TXUARKhyaeVQHnWe8WcXJ5">
-            <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+            <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.dll">
               <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
               <Choice Kind="ApplicationStatefulRegion" Name="If" />
               <FullNameCategoryReference ID="Primitive" />
@@ -202,23 +196,14 @@
                 <Pin Id="DCcB3gMX4lvQRAJ8Z68EAJ" Name="Output" Kind="OutputPin" />
               </Node>
               <Node Bounds="488,664,48,19" Id="EFLM5ujqsJCPzJuhbvPNn5">
-                <p:NodeReference LastCategoryFullName="Collections.Sequence" LastSymbolSource="VL.Collections.vl">
+                <p:NodeReference LastCategoryFullName="Collections.Spread" LastSymbolSource="VL.Collections.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <Choice Kind="OperationCallFlag" Name="Concat" />
-                  <CategoryReference Kind="MutableInterfaceType" Name="Sequence" NeedsToBeDirectParent="true" />
+                  <CategoryReference Kind="RecordType" Name="Spread" NeedsToBeDirectParent="true" />
                 </p:NodeReference>
                 <Pin Id="KceK5dmCJNRLenaSH1hRHQ" Name="Input" Kind="StateInputPin" />
                 <Pin Id="ETqdHpIWSlXPQ3CD8DDL5A" Name="Input 2" Kind="StateInputPin" />
                 <Pin Id="F7ubfhmxgPtLRvgUizhsny" Name="Output" Kind="OutputPin" />
-              </Node>
-              <Node Bounds="488,695,83,26" Id="LUdVrOo3oSDP4IbYGjUsu1">
-                <p:NodeReference LastCategoryFullName="Collections.Mutable.MutableArray" LastSymbolSource="VL.Collections.vl">
-                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                  <Choice Kind="OperationCallFlag" Name="FromSequence" />
-                  <CategoryReference Kind="ArrayType" Name="MutableArray" NeedsToBeDirectParent="true" />
-                </p:NodeReference>
-                <Pin Id="F2a8Sb2DA1DL9pzh6PDYvY" Name="Input" Kind="StateInputPin" />
-                <Pin Id="GLuLwcdZdgSOWArFJF0vu8" Name="Result" Kind="OutputPin" />
               </Node>
             </Patch>
             <ControlPoint Id="R3UkLEiFVwgPxBy0PBV9Qu" Bounds="490,742" Alignment="Bottom" />
@@ -247,14 +232,13 @@
         <Link Id="I28hbti6qTcObYRGCTrof5" Ids="AzJ3Pxar1hJMSm1IjR7l9r,KceK5dmCJNRLenaSH1hRHQ" />
         <Link Id="TSElp0Vdk19OK5io9FpFxd" Ids="QN9E66uof9tNZV3EiOGQfD,D5VjhUYQvmePI0tjOICLjE" />
         <Link Id="LxhHONIeHVfNJ3vFzArOmM" Ids="DCcB3gMX4lvQRAJ8Z68EAJ,ETqdHpIWSlXPQ3CD8DDL5A" />
-        <Link Id="IMJVbplnfz4P83C1K8tqbE" Ids="F7ubfhmxgPtLRvgUizhsny,F2a8Sb2DA1DL9pzh6PDYvY" />
         <Link Id="LK9m1r5f7YRQPvEh6DaAHf" Ids="FETjwSBE7VbPSYlFCLr4cu,GVHqdLDFERuN8y8WW11iKt" />
         <Link Id="VbtycrwaPmAQNFXXzNkoAv" Ids="FMTqsOKSAxVMTHdcFKxYml,R3UkLEiFVwgPxBy0PBV9Qu" IsFeedback="true" />
-        <Link Id="QtZlSar835RMjGwfjEyAxb" Ids="GLuLwcdZdgSOWArFJF0vu8,R3UkLEiFVwgPxBy0PBV9Qu" />
-        <Link Id="GqU1cVdrj3PLHC8aaj4fua" Ids="R3UkLEiFVwgPxBy0PBV9Qu,GufiydNL6c9OOgNBHnao5H" />
+        <Link Id="LzeNUZANDueLMNfT6fWRXH" Ids="F7ubfhmxgPtLRvgUizhsny,R3UkLEiFVwgPxBy0PBV9Qu" />
+        <Link Id="QvcqZW0BXNJPiZwJl6fhMF" Ids="R3UkLEiFVwgPxBy0PBV9Qu,GufiydNL6c9OOgNBHnao5H" />
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="VJ8q0V1Ren4LEKcNoHypfb" Location="VL.Skia" Version="2020.1.3" />
+  <NugetDependency Id="VJ8q0V1Ren4LEKcNoHypfb" Location="VL.Skia" Version="2021.4.10-1007-g66c84f8e50" />
   <NugetDependency Id="I8fpicrno0aLmIEDbdmERY" Location="VL.IO.TCP" Version="0.0.0.0" />
 </Document>
