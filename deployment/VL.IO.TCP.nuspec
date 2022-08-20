@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
   <metadata>
     <id>VL.IO.TCP</id>
-    <version>0.4.0-alpha</version>
+    <version>0.4.1-alpha</version>
     <title>VL.IO.TCP</title>
     <authors>vvvv, Joel Christner</authors>
     <owners>vvvv</owners>
