@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="CkPiUuEN7ZvQMFB6F581kf" LanguageVersion="2021.4.10.1012" Version="0.128">
-  <NugetDependency Id="EZUnema5doTP51SeSqBc43" Location="VL.CoreLib" Version="2021.4.10-1007-g66c84f8e50" />
+<Document xmlns:p="property" Id="Lq9CiTeVQ4mL1aeVqTesha" LanguageVersion="2021.4.10.1043" Version="0.128">
+  <NugetDependency Id="EZUnema5doTP51SeSqBc43" Location="VL.CoreLib" Version="2021.4.10" />
   <Patch Id="DRdtZLOOVdjMBJH8Giq9e8">
     <Canvas Id="JQWM12ukQLfMW8RnQD04JR" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -70,7 +70,7 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Renderer" />
             </p:NodeReference>
-            <Pin Id="Mi8QIMxfkhmMmM2OTsj6th" Name="Bounds" Kind="InputPin" DefaultValue="894, 222, 385, 295">
+            <Pin Id="Mi8QIMxfkhmMmM2OTsj6th" Name="Bounds" Kind="InputPin" DefaultValue="1072, 172, 385, 295">
               <p:TypeAnnotation LastCategoryFullName="System.Drawing" LastSymbolSource="System.Drawing.dll">
                 <Choice Kind="TypeFlag" Name="Rectangle" />
               </p:TypeAnnotation>
@@ -239,6 +239,6 @@
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="VJ8q0V1Ren4LEKcNoHypfb" Location="VL.Skia" Version="2021.4.10-1007-g66c84f8e50" />
+  <NugetDependency Id="VJ8q0V1Ren4LEKcNoHypfb" Location="VL.Skia" Version="2021.4.10" />
   <NugetDependency Id="I8fpicrno0aLmIEDbdmERY" Location="VL.IO.TCP" Version="0.0.0.0" />
 </Document>

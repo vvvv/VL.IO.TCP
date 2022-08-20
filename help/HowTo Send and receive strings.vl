@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="CkPiUuEN7ZvQMFB6F581kf" LanguageVersion="2021.4.9.982" Version="0.128">
-  <NugetDependency Id="EZUnema5doTP51SeSqBc43" Location="VL.CoreLib" Version="2021.4.9" />
+<Document xmlns:p="property" Id="CkPiUuEN7ZvQMFB6F581kf" LanguageVersion="2021.4.10.1043" Version="0.128">
+  <NugetDependency Id="EZUnema5doTP51SeSqBc43" Location="VL.CoreLib" Version="2021.4.10" />
   <Patch Id="DRdtZLOOVdjMBJH8Giq9e8">
     <Canvas Id="JQWM12ukQLfMW8RnQD04JR" DefaultCategory="Main" CanvasType="FullCategory" />
     <!--
@@ -21,6 +21,7 @@
               <Choice Kind="ProcessNode" Name="TCPClient" />
               <CategoryReference Kind="Category" Name="TCP" NeedsToBeDirectParent="true" />
             </p:NodeReference>
+            <p:HelpFocus p:Assembly="VL.Lang" p:Type="VL.Model.HelpPriority">High</p:HelpFocus>
             <Pin Id="L1MbmkI9XgVP5Wyc5ClWuO" Name="Server" Kind="InputPin" />
             <Pin Id="TxEQ5W7Gm8jQQPHIJrnwQQ" Name="Port" Kind="InputPin" DefaultValue="4446" />
             <Pin Id="EmjTSQuF2wSNeBjuICJ7YN" Name="Connection Timeout" Kind="InputPin" />
@@ -39,6 +40,7 @@
               <Choice Kind="ProcessAppFlag" Name="TCPServer" />
               <CategoryReference Kind="Category" Name="TCP" NeedsToBeDirectParent="true" />
             </p:NodeReference>
+            <p:HelpFocus p:Assembly="VL.Lang" p:Type="VL.Model.HelpPriority">High</p:HelpFocus>
             <Pin Id="UfyzmRMNtN1Nhol25rn2Xa" Name="Listener IP" Kind="InputPin" />
             <Pin Id="JbIpsk8M2AWNRI5r1Gdspy" Name="Port" Kind="InputPin" DefaultValue="4446" />
             <Pin Id="C86oFf0UIl5Nl6C9mhGJPT" Name="Enabled" Kind="InputPin" />
@@ -103,7 +105,7 @@
             <Pin Id="M7iPSuCrr4APleyrbkjugP" Name="Queue Length" Kind="OutputPin" />
             <Pin Id="VAR8xfGzAAcNGKr9l70HT5" Name="Buffer Size" Kind="OutputPin" />
           </Node>
-          <Pad Id="L3lPQIE1yKBP9dR8hAOC9R" Bounds="383,587,159,19" ShowValueBox="true" isIOBox="true" Value="ReadStringUntil (Queued)">
+          <Pad Id="L3lPQIE1yKBP9dR8hAOC9R" Bounds="383,587,159,19" ShowValueBox="true" isIOBox="true" Value="StringReceiver (Queued)">
             <p:TypeAnnotation>
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
@@ -124,7 +126,7 @@
             <Pin Id="EwagmI7ZTvzPrjAfFIFVoi" Name="Output" Kind="OutputPin" />
             <Pin Id="TyZ8xXYeU50MWshmdHhBqo" Name="Buffer Size" Kind="OutputPin" />
           </Node>
-          <Pad Id="EMiiHat4OvgLYXgtXc0uFx" Bounds="383,705,229,19" ShowValueBox="true" isIOBox="true" Value="ReadStringUntil (Reactive): Advanced">
+          <Pad Id="EMiiHat4OvgLYXgtXc0uFx" Bounds="383,705,229,19" ShowValueBox="true" isIOBox="true" Value="StringReceiver (Reactive): Advanced">
             <p:TypeAnnotation>
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
@@ -313,6 +315,5 @@
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="VJ8q0V1Ren4LEKcNoHypfb" Location="VL.Skia" Version="2021.4.9" />
   <NugetDependency Id="I8fpicrno0aLmIEDbdmERY" Location="VL.IO.TCP" Version="0.0.0.0" />
 </Document>
