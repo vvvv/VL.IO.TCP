@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="FhH3qde1juCNl8qYknNVJr" LanguageVersion="2021.4.10.1043" Version="0.128">
-  <NugetDependency Id="KJZVkKyYdl5LGZHJEYIfgr" Location="VL.CoreLib" Version="2021.4.10" />
+<Document xmlns:p="property" xmlns:r="reflection" Id="FhH3qde1juCNl8qYknNVJr" LanguageVersion="2023.5.2" Version="0.128">
+  <NugetDependency Id="KJZVkKyYdl5LGZHJEYIfgr" Location="VL.CoreLib" Version="2023.5.2" />
   <Patch Id="I7mYxEr77LVMSb606OLbLr">
     <Canvas Id="KO0WH8tEgDZOOYwSnARFJ4" DefaultCategory="IO.TCP" CanvasType="FullCategory">
       <!--
@@ -18,27 +18,27 @@
             <ControlPoint Id="VMGdpH6LkSuNjgCHI9YhKt" Bounds="322,105" />
             <ControlPoint Id="Pwc8xOdPHurLCcvgVJtckt" Bounds="342,127" />
             <Node Bounds="223,168,405,622" Id="BHoIF0POdrjL13RdkRZKAp">
-              <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.dll">
+              <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
                 <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                 <Choice Kind="ProcessStatefulRegion" Name="Cache" />
                 <FullNameCategoryReference ID="Primitive" />
               </p:NodeReference>
-              <Pin Id="Swnm0jVI7XZN87buBTDPiq" Name="Force" Kind="InputPin" />
-              <Pin Id="JnQoGH72R7hModIuuhzMmH" Name="Dispose Cached Outputs" Kind="InputPin" DefaultValue="True">
-                <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                  <Choice Kind="TypeFlag" Name="Boolean" />
-                </p:TypeAnnotation>
-              </Pin>
-              <Pin Id="LQjP8Vo7ZFtMdEyPdyKihB" Name="Has Changed" Kind="OutputPin" />
               <ControlPoint Id="J3C2mF1UWvEMRgKxERTpb5" Bounds="322,174" Alignment="Top" />
               <ControlPoint Id="HAZtrCBXaGNPdQOl8jEyeN" Bounds="342,174" Alignment="Top" />
               <ControlPoint Id="Mlv48wo7002PV3CmgUsJjG" Bounds="293,784" Alignment="Bottom" />
               <ControlPoint Id="UrKUXGs7ZpIN0NcMQerMuw" Bounds="440,784" Alignment="Bottom" />
+              <Pin Id="Swnm0jVI7XZN87buBTDPiq" Name="Force" Kind="InputPin" />
+              <Pin Id="JnQoGH72R7hModIuuhzMmH" Name="Dispose Cached Outputs" Kind="InputPin" DefaultValue="True">
+                <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                  <Choice Kind="TypeFlag" Name="Boolean" />
+                </p:TypeAnnotation>
+              </Pin>
+              <Pin Id="LQjP8Vo7ZFtMdEyPdyKihB" Name="Has Changed" Kind="OutputPin" />
               <Patch Id="V8L1PD8OFEOMUqzR03pkDb" ManuallySortedPins="true">
                 <Patch Id="GP3mW2cq7l9LEMEsb5sh6S" Name="Create" ManuallySortedPins="true" />
                 <Patch Id="SZVKjt2DgvDM9Lfzv224Gw" Name="Then" ManuallySortedPins="true" />
                 <Node Bounds="354,192,55,19" Id="LJ3kTcrdBViMMGNWi95Qyc">
-                  <p:NodeReference LastCategoryFullName="IO.Net.IPAddress" LastSymbolSource="VL.CoreLib.IO.vl">
+                  <p:NodeReference LastCategoryFullName="IO.Net.IPAddress" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="TryParse" />
                     <FullNameCategoryReference ID="IO.Net.IPAddress" />
@@ -48,15 +48,15 @@
                   <Pin Id="R1etPIaESyjLPgVV42A1WA" Name="Address" Kind="OutputPin" />
                 </Node>
                 <Node Bounds="420,191,60,19" Id="FWhxYrlTtTlQYM1pa1GO46">
-                  <p:NodeReference LastCategoryFullName="System.Uri" LastSymbolSource="System.Runtime.dll">
+                  <p:NodeReference LastCategoryFullName="System.Uri" LastDependency="System.Runtime.dll">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <CategoryReference Kind="AssemblyCategory" Name="Uri" />
                     <Choice Kind="OperationCallFlag" Name="TryCreate" />
-                    <PinReference Kind="InputPin" Name="Uri String" />
+                    <PinReference Kind="InputPin" Name="Uri Kind" />
                   </p:NodeReference>
                   <Pin Id="Dnzr5l4TorxNQ9DdtzypaB" Name="Uri String" Kind="InputPin" />
                   <Pin Id="PGRzuwzw3PSPjojI5I0DRC" Name="Uri Kind" Kind="InputPin" DefaultValue="Absolute">
-                    <p:TypeAnnotation LastCategoryFullName="System" LastSymbolSource="System.dll">
+                    <p:TypeAnnotation LastCategoryFullName="System" LastDependency="System.dll">
                       <Choice Kind="TypeFlag" Name="UriKind" />
                     </p:TypeAnnotation>
                   </Pin>
@@ -64,7 +64,7 @@
                   <Pin Id="RmIPBgrmcfPQQHdmqjhdxz" Name="Result" Kind="OutputPin" />
                 </Node>
                 <Node Bounds="355,226,30,19" Id="LpMcvucPIP8MZfpfySSsLM">
-                  <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="CoreLibBasics.vl">
+                  <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="OR" />
                     <CategoryReference Kind="BooleanType" Name="Boolean" NeedsToBeDirectParent="true" />
@@ -74,7 +74,7 @@
                   <Pin Id="MOdzI1yh7zGLPObmnePB1I" Name="Output" Kind="StateOutputPin" />
                 </Node>
                 <Node Bounds="278,255,37,19" Id="QHAhmXMq9PaNmi1jKzZvH3">
-                  <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="CoreLibBasics.vl">
+                  <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="AND" />
                     <CategoryReference Kind="BooleanType" Name="Boolean" NeedsToBeDirectParent="true" />
@@ -83,34 +83,35 @@
                   <Pin Id="DscQpy2eQ4OL7ZO5dpTUIP" Name="Input 2" Kind="InputPin" />
                   <Pin Id="BI3bQAwEQ8fPbNHEC4dOwO" Name="Output" Kind="StateOutputPin" />
                 </Node>
-                <Node Bounds="254,293,362,329" Id="LrRVkUsbZYwNiTSaPUppq8">
-                  <p:NodeReference LastCategoryFullName="Control" LastSymbolSource="CoreLibBasics.vl">
+                <Node Bounds="254,293,362,398" Id="LrRVkUsbZYwNiTSaPUppq8">
+                  <p:NodeReference LastCategoryFullName="Control" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                     <Choice Kind="ProcessAppFlag" Name="Try" />
                   </p:NodeReference>
+                  <ControlPoint Id="B7P91v2ngPdMbvcEqSxPlr" Bounds="291,685" Alignment="Bottom" />
                   <Pin Id="Odhyd1TLQOkP7XcFJj1Zjg" Name="Stick To Last Valid Outputs" Kind="InputPin" />
                   <Pin Id="NaPCm5NC1miLvvC7MkugS2" Name="Reset Region On Failure" Kind="InputPin" />
                   <Pin Id="FPW6b1IvPxHPFMBxfO1MIl" Name="Success" Kind="OutputPin" />
-                  <Pin Id="OjVnw6Iv5hlLeCXurWOt5T" Name="Error Message" Kind="OutputPin" />
                   <Pin Id="CZ3Bln0XudbMXWiTCxL0Pj" Name="Failure" Kind="OutputPin" />
-                  <ControlPoint Id="B7P91v2ngPdMbvcEqSxPlr" Bounds="291,616" Alignment="Bottom" />
+                  <Pin Id="OjVnw6Iv5hlLeCXurWOt5T" Name="Error Message" Kind="OutputPin" />
+                  <Pin Id="CerAHj8PdVSMdBjIBrIb7I" Name="Exceptions" Kind="OutputPin" />
                   <Patch Id="LjRSkrfCqAlQQJSkpefyP8" ManuallySortedPins="true">
                     <Patch Id="GIcPjdMS6vrOW4BkVNPmWV" Name="Create" ManuallySortedPins="true" />
                     <Patch Id="FwrG00QY9CUNcTCohoht0f" Name="Update" ManuallySortedPins="true" />
                     <Node Bounds="277,313,327,358" Id="EJgXM8YwySkMFCfKwe9oEX">
-                      <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.dll">
+                      <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
                         <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                         <Choice Kind="ApplicationStatefulRegion" Name="If" />
                         <FullNameCategoryReference ID="Primitive" />
                       </p:NodeReference>
                       <Pin Id="GBv7PvFLy2ZMfW02LrNdPG" Name="Condition" Kind="InputPin" />
-                      <ControlPoint Id="RXoTyen7bESMgeoHBeYXx9" Bounds="291,596" Alignment="Bottom" />
-                      <ControlPoint Id="LdRwWov7aiHMyp9cpiijH0" Bounds="428,320" Alignment="Top" />
+                      <ControlPoint Id="RXoTyen7bESMgeoHBeYXx9" Bounds="291,665" Alignment="Bottom" />
+                      <ControlPoint Id="LdRwWov7aiHMyp9cpiijH0" Bounds="428,319" Alignment="Top" />
                       <Patch Id="Q5IAIBwXV9FOIx7QfFhlhG" ManuallySortedPins="true">
                         <Patch Id="K7ANM4aZUbPNXztO0zJUl1" Name="Create" ManuallySortedPins="true" />
                         <Patch Id="BkQEN4HUWL7O5sXhwoeRIf" Name="Then" ManuallySortedPins="true" />
                         <Node Bounds="289,411,85,26" Id="SdQpUAHMSSPPDs76zafPAk">
-                          <p:NodeReference LastCategoryFullName="SuperSimpleTcp.SimpleTcpClient" LastSymbolSource="SuperSimpleTcp.dll">
+                          <p:NodeReference LastCategoryFullName="SuperSimpleTcp.SimpleTcpClient" LastDependency="SuperSimpleTcp.dll">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <Choice Kind="OperationCallFlag" Name="Create" />
                             <CategoryReference Kind="AssemblyCategory" Name="SimpleTcpClient" NeedsToBeDirectParent="true" />
@@ -121,7 +122,7 @@
                           <Pin Id="O2DTTYlC3UUL45MdsWR0Dd" Name="Output" Kind="StateOutputPin" />
                         </Node>
                         <Node Bounds="510,363,82,92" Id="KTixeFjsna0La7IzOgYlS4">
-                          <p:NodeReference>
+                          <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
                             <Choice Kind="ApplicationRegion" Name="Delegate" />
                             <FullNameCategoryReference ID="Primitive" />
                           </p:NodeReference>
@@ -130,13 +131,13 @@
                             <Pin Id="UGBDRqURerzOA9d8xz4JgM" Name="Arg" Kind="InputPin" />
                             <ControlPoint Id="FYkeuqsy4k5L9UNrhtV8u7" Bounds="524,381" />
                             <Node Bounds="522,409,58,26" Id="ClYM6RNVslgOfz0t3aHCrQ">
-                              <p:NodeReference LastCategoryFullName="System.Console" LastSymbolSource="CoreLibBasics.vl">
+                              <p:NodeReference LastCategoryFullName="System.Console" LastDependency="VL.CoreLib.vl">
                                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                                 <Choice Kind="OperationCallFlag" Name="WriteLine" />
                               </p:NodeReference>
                               <Pin Id="SDBO9NrqnCwLGRjox6EkE6" Name="Value" Kind="InputPin" />
                               <Pin Id="PpCoyIqSU7ZLUX58wE3WVR" Name="Apply" Kind="InputPin" DefaultValue="True">
-                                <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                                <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
                                   <Choice Kind="TypeFlag" Name="Boolean" />
                                 </p:TypeAnnotation>
                               </Pin>
@@ -144,7 +145,7 @@
                           </Patch>
                         </Node>
                         <Node Bounds="289,467,74,26" Id="AqubWqiTZjcNKgcBgLTX6G">
-                          <p:NodeReference LastCategoryFullName="SuperSimpleTcp.SimpleTcpClient" LastSymbolSource="SuperSimpleTcp.dll">
+                          <p:NodeReference LastCategoryFullName="SuperSimpleTcp.SimpleTcpClient" LastDependency="SuperSimpleTcp.dll">
                             <Choice Kind="OperationCallFlag" Name="SetLogger" />
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <CategoryReference Kind="AssemblyCategory" Name="SimpleTcpClient" NeedsToBeDirectParent="true" />
@@ -154,7 +155,7 @@
                           <Pin Id="MnA0l5w88poLxGtzbeN2RF" Name="Output" Kind="StateOutputPin" />
                         </Node>
                         <Node Bounds="290,513,74,26" Id="VnvPWDCdMyfNWpw44d4Yhc">
-                          <p:NodeReference LastCategoryFullName="SuperSimpleTcp.SimpleTcpClient" LastSymbolSource="SuperSimpleTcp.dll">
+                          <p:NodeReference LastCategoryFullName="SuperSimpleTcp.SimpleTcpClient" LastDependency="SuperSimpleTcp.dll">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <Choice Kind="OperationCallFlag" Name="SetKeepalive" />
                             <CategoryReference Kind="AssemblyCategory" Name="SimpleTcpClient" NeedsToBeDirectParent="true" />
@@ -164,15 +165,15 @@
                           <Pin Id="HjWk2CCPl0wMbVVKYfAppZ" Name="Output" Kind="StateOutputPin" />
                         </Node>
                         <Node Bounds="461,474,115,26" Id="SdWSOzJpUKmP5Rp3StCtGw">
-                          <p:NodeReference LastCategoryFullName="SuperSimpleTcp.SimpleTcpKeepaliveSettings" LastSymbolSource="SuperSimpleTcp.dll">
+                          <p:NodeReference LastCategoryFullName="SuperSimpleTcp.SimpleTcpKeepaliveSettings" LastDependency="SuperSimpleTcp.dll">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <CategoryReference Kind="AssemblyCategory" Name="SimpleTcpKeepaliveSettings" />
                             <Choice Kind="OperationCallFlag" Name="Create" />
                           </p:NodeReference>
                           <Pin Id="BqRmaQKIR6TL856HMJlGug" Name="Output" Kind="StateOutputPin" />
                         </Node>
-                        <Node Bounds="462,509,115,26" Id="Lxtg097DQUxL9veB6DNa93">
-                          <p:NodeReference LastCategoryFullName="SuperSimpleTcp.SimpleTcpKeepaliveSettings" LastSymbolSource="SuperSimpleTcp.dll">
+                        <Node Bounds="462,509,126,26" Id="Lxtg097DQUxL9veB6DNa93">
+                          <p:NodeReference LastCategoryFullName="SuperSimpleTcp.SimpleTcpKeepaliveSettings" LastDependency="SuperSimpleTcp.dll">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <Choice Kind="OperationCallFlag" Name="SetEnableTcpKeepAlives" />
                           </p:NodeReference>
@@ -181,7 +182,7 @@
                           <Pin Id="H4HAsFzbi55L4XVkIHkVc2" Name="Output" Kind="StateOutputPin" />
                         </Node>
                         <Node Bounds="341,560,98,85" Id="AplOPuA6zeNL31biZH0RBO">
-                          <p:NodeReference LastCategoryFullName="Reactive" LastSymbolSource="VL.Reactive.vl">
+                          <p:NodeReference LastCategoryFullName="Reactive" LastDependency="VL.CoreLib.vl">
                             <Choice Kind="ProcessAppFlag" Name="AsyncTask" />
                             <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                           </p:NodeReference>
@@ -198,7 +199,7 @@
                             <ControlPoint Id="HT1UbdQGv4LOMFGZDrHfmq" Bounds="381,568" />
                             <ControlPoint Id="Ng5dgVf8Z9qLOfuyVyiPUr" Bounds="358,638" />
                             <Node Bounds="353,589,74,26" Id="JQwrH9aYvxtLoEMU9Z7bl0">
-                              <p:NodeReference LastCategoryFullName="SuperSimpleTcp.SimpleTcpClient" LastSymbolSource="SuperSimpleTcp.dll">
+                              <p:NodeReference LastCategoryFullName="SuperSimpleTcp.SimpleTcpClient" LastDependency="SuperSimpleTcp.dll">
                                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                                 <CategoryReference Kind="AssemblyCategory" Name="SimpleTcpClient" NeedsToBeDirectParent="true" />
                                 <Choice Kind="OperationCallFlag" Name="Connect" />
@@ -213,7 +214,7 @@
                   </Patch>
                 </Node>
                 <Node Bounds="438,714,25,19" Id="Nmwbs54gftANIVwgYKUos4">
-                  <p:NodeReference LastCategoryFullName="Math" LastSymbolSource="CoreLibBasics.vl">
+                  <p:NodeReference LastCategoryFullName="Math" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="=" />
                   </p:NodeReference>
@@ -222,7 +223,7 @@
                   <Pin Id="TxtgqSrl1jzOfJwW7qI6gF" Name="Result" Kind="OutputPin" />
                 </Node>
                 <Node Bounds="438,740,45,19" Id="N358UzwKjWdPQrNHkBAD99">
-                  <p:NodeReference LastCategoryFullName="Control" LastSymbolSource="CoreLibBasics.vl">
+                  <p:NodeReference LastCategoryFullName="Control" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="Switch" />
                     <CategoryReference Kind="Category" Name="Control" NeedsToBeDirectParent="true" />
@@ -236,7 +237,7 @@
             </Node>
             <ControlPoint Id="HPNmZMP2RpUMPwGYitoqai" Bounds="602,31" />
             <Node Bounds="600,76,56,19" Id="RHCoGqwgN9LLi7Fyk1JE3Z">
-              <p:NodeReference LastCategoryFullName="Control" LastSymbolSource="CoreLibBasics.vl">
+              <p:NodeReference LastCategoryFullName="Control" LastDependency="VL.CoreLib.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="ProcessAppFlag" Name="TogEdge" />
               </p:NodeReference>
@@ -245,7 +246,7 @@
               <Pin Id="Ux2rTnkC3opNuPM4Gi7y16" Name="Down Edge" Kind="OutputPin" />
             </Node>
             <Node Bounds="127,880,603,276" Id="HUcit5UGY4qOdK2aX7Ug45">
-              <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.dll">
+              <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
                 <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                 <Choice Kind="ApplicationStatefulRegion" Name="If" />
                 <FullNameCategoryReference ID="Primitive" />
@@ -263,7 +264,7 @@
                 <Patch Id="NieQSektFGuNyefxk3gOvU" Name="Create" ManuallySortedPins="true" />
                 <Patch Id="UlZtk6zKpnVN0iUnfFdKf5" Name="Then" ManuallySortedPins="true" />
                 <Node Bounds="398,969,74,26" Id="Mpi8witn0dhLlDwYnuUYVR">
-                  <p:NodeReference LastCategoryFullName="SuperSimpleTcp.SimpleTcpClient" LastSymbolSource="SuperSimpleTcp.dll">
+                  <p:NodeReference LastCategoryFullName="SuperSimpleTcp.SimpleTcpClient" LastDependency="SuperSimpleTcp.dll">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="IsConnected" />
                     <CategoryReference Kind="AssemblyCategory" Name="SimpleTcpClient" NeedsToBeDirectParent="true" />
@@ -273,7 +274,7 @@
                   <Pin Id="FgNt5fDMC4FPhPXVVdDeyO" Name="Is Connected" Kind="OutputPin" />
                 </Node>
                 <Node Bounds="507,1002,74,26" Id="HNLA24KntXVPTybrqXkzp7">
-                  <p:NodeReference LastCategoryFullName="SuperSimpleTcp.SimpleTcpClient" LastSymbolSource="SuperSimpleTcp.dll">
+                  <p:NodeReference LastCategoryFullName="SuperSimpleTcp.SimpleTcpClient" LastDependency="SuperSimpleTcp.dll">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="Statistics" />
                     <CategoryReference Kind="AssemblyCategory" Name="SimpleTcpClient" NeedsToBeDirectParent="true" />
@@ -283,7 +284,7 @@
                   <Pin Id="KxRp23eknT5Mm8ZZbXnrUC" Name="Statistics" Kind="OutputPin" />
                 </Node>
                 <Node Bounds="180,950,97,26" Id="FOXGC5wtIE6Mgfeff6MPH6">
-                  <p:NodeReference LastCategoryFullName="SuperSimpleTcp.SimpleTcpClientEvents" LastSymbolSource="SuperSimpleTcp.dll">
+                  <p:NodeReference LastCategoryFullName="SuperSimpleTcp.SimpleTcpClientEvents" LastDependency="SuperSimpleTcp.dll">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="DataReceived" />
                     <CategoryReference Kind="AssemblyCategory" Name="SimpleTcpClientEvents" NeedsToBeDirectParent="true" />
@@ -292,7 +293,7 @@
                   <Pin Id="NW6v9HzFuwBNCHlJcbG9Du" Name="Result" Kind="OutputPin" />
                 </Node>
                 <Node Bounds="179,993,86,98" Id="UpAGOaMLjMoMvHO3eZC4X4">
-                  <p:NodeReference LastCategoryFullName="Reactive" LastSymbolSource="VL.Reactive.vl">
+                  <p:NodeReference LastCategoryFullName="Reactive" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="ProcessAppFlag" Name="ForEach" />
                     <CategoryReference Kind="Category" Name="Reactive" NeedsToBeDirectParent="true" />
                     <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
@@ -309,7 +310,7 @@
                     <ControlPoint Id="UwjjdBf5SE7M4VgwoZ6l44" Bounds="193,1001" />
                     <ControlPoint Id="JxXHNg3vUVkNmFAyxgMWVw" Bounds="193,1084" />
                     <Node Bounds="191,1026,62,26" Id="Jn0U7HpPagpLijYgS7JWP4">
-                      <p:NodeReference LastCategoryFullName="Reactive.EventPattern" LastSymbolSource="VL.Reactive.vl">
+                      <p:NodeReference LastCategoryFullName="Reactive.EventPattern" LastDependency="VL.CoreLib.vl">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <CategoryReference Kind="RecordType" Name="EventPattern" />
                         <Choice Kind="OperationCallFlag" Name="EventArgs" />
@@ -320,7 +321,7 @@
                   </Patch>
                 </Node>
                 <Node Bounds="642,1092,74,26" Id="F10LYeMUQqCQELwxe1Ul47">
-                  <p:NodeReference LastCategoryFullName="SuperSimpleTcp.SimpleTcpClient" LastSymbolSource="SuperSimpleTcp.dll">
+                  <p:NodeReference LastCategoryFullName="SuperSimpleTcp.SimpleTcpClient" LastDependency="SuperSimpleTcp.dll">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="Dispose" />
                     <CategoryReference Kind="AssemblyCategory" Name="SimpleTcpClient" NeedsToBeDirectParent="true" />
@@ -330,7 +331,7 @@
                   <Pin Id="BS8czdb6egRLOCtJ9UAsG6" Name="Apply" Kind="InputPin" />
                 </Node>
                 <Node Bounds="548,1089,55,19" Id="BzrzzsZoHx6NcaZWc9DjJJ">
-                  <p:NodeReference LastCategoryFullName="System.Conversion" LastSymbolSource="CoreLibBasics.vl">
+                  <p:NodeReference LastCategoryFullName="System.Conversion" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="ToString" />
                   </p:NodeReference>
@@ -338,7 +339,7 @@
                   <Pin Id="PPxZuewR3C1QZq0cIWiKnt" Name="Result" Kind="OutputPin" />
                 </Node>
                 <Node Bounds="288,904,74,26" Id="Qf2ymRDDthWLlIaYjkw1kk">
-                  <p:NodeReference LastCategoryFullName="SuperSimpleTcp.SimpleTcpClient" LastSymbolSource="SuperSimpleTcp.dll">
+                  <p:NodeReference LastCategoryFullName="SuperSimpleTcp.SimpleTcpClient" LastDependency="SuperSimpleTcp.dll">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="Events" />
                     <CategoryReference Kind="AssemblyCategory" Name="SimpleTcpClient" NeedsToBeDirectParent="true" />
@@ -348,7 +349,7 @@
                   <Pin Id="CI20LVZJrZfLVewekojqeN" Name="Events" Kind="OutputPin" />
                 </Node>
                 <Node Bounds="641,1048,74,26" Id="VnYHocTRv9bQF3YH2PxNNt">
-                  <p:NodeReference LastCategoryFullName="SuperSimpleTcp.SimpleTcpClient" LastSymbolSource="SuperSimpleTcp.dll">
+                  <p:NodeReference LastCategoryFullName="SuperSimpleTcp.SimpleTcpClient" LastDependency="SuperSimpleTcp.dll">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="Disconnect" />
                     <CategoryReference Kind="AssemblyCategory" Name="SimpleTcpClient" NeedsToBeDirectParent="true" />
@@ -360,7 +361,7 @@
               </Patch>
             </Node>
             <Node Bounds="127,833,65,19" Id="VPakcTaWnVGMGgjPtM2FXa">
-              <p:NodeReference LastCategoryFullName="Primitive.Object" LastSymbolSource="CoreLibBasics.vl">
+              <p:NodeReference LastCategoryFullName="Primitive.Object" LastDependency="VL.CoreLib.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="OperationCallFlag" Name="IsAssigned" />
               </p:NodeReference>
@@ -372,7 +373,7 @@
             <ControlPoint Id="R2M7IGeJ0hmL0w7Plg5YJO" Bounds="557,1180" />
             <ControlPoint Id="O4LmRgpXOEELS1OZ5xmwuF" Bounds="181,1183" />
             <Node Bounds="840,1001,145,118" Id="T6DXadXeFR6MTY17417Gi3">
-              <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.dll">
+              <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
                 <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                 <Choice Kind="ApplicationStatefulRegion" Name="If" />
                 <FullNameCategoryReference ID="Primitive" />
@@ -382,14 +383,14 @@
                 <Patch Id="ArJ8nRfQ9qVMBiJUpPr70o" Name="Create" ManuallySortedPins="true" />
                 <Patch Id="CbubJJLhQseOGFrC6HVnOI" Name="Then" ManuallySortedPins="true" />
                 <Node Bounds="852,1073,74,26" Id="NECKoIywzopM51SdB3eDOT">
-                  <p:NodeReference LastCategoryFullName="SuperSimpleTcp.SimpleTcpClient" LastSymbolSource="SuperSimpleTcp.dll">
+                  <p:NodeReference LastCategoryFullName="SuperSimpleTcp.SimpleTcpClient" LastDependency="SuperSimpleTcp.dll">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="Send" />
                     <PinReference Kind="InputPin" Name="Data">
-                      <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="System" LastSymbolSource="mscorlib.dll">
+                      <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="System" LastDependency="mscorlib.dll">
                         <Choice Kind="TypeFlag" Name="Array`1" />
                         <p:TypeArguments>
-                          <TypeReference LastCategoryFullName="System" LastSymbolSource="mscorlib.dll">
+                          <TypeReference LastCategoryFullName="System" LastDependency="mscorlib.dll">
                             <Choice Kind="TypeFlag" Name="Byte" />
                           </TypeReference>
                         </p:TypeArguments>
@@ -402,7 +403,7 @@
                   <Pin Id="HUUzaN47B6qQYMjzc8dt8A" Name="Output" Kind="StateOutputPin" />
                 </Node>
                 <Node Bounds="921,1024,52,19" Id="AgYwKd00hd8MjKkRjy1zfa">
-                  <p:NodeReference LastCategoryFullName="Primitive.String" LastSymbolSource="CoreLibBasics.vl">
+                  <p:NodeReference LastCategoryFullName="Primitive.String" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="ToBytes" />
                     <CategoryReference Kind="StringType" Name="String" NeedsToBeDirectParent="true" />
@@ -415,7 +416,7 @@
             </Node>
             <ControlPoint Id="MYzLHprcZ1dQNu5HXnSjGq" Bounds="950,783" />
             <Node Bounds="701,127,45,19" Id="F43bFAROnVxO6AUtRmPKTE">
-              <p:NodeReference LastCategoryFullName="Animation" LastSymbolSource="CoreLibBasics.vl">
+              <p:NodeReference LastCategoryFullName="Animation" LastDependency="VL.CoreLib.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="ProcessAppFlag" Name="LFO" />
               </p:NodeReference>
@@ -427,7 +428,7 @@
               <Pin Id="UI5HfUGXS4FMNH0GzAh25D" Name="Cycles" Kind="OutputPin" />
             </Node>
             <Node Bounds="721,62,45,19" Id="I1ohICnZvfiPHBOdMH58Kk">
-              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="CoreLibBasics.vl">
+              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastDependency="VL.CoreLib.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="OperationCallFlag" Name="AND" />
               </p:NodeReference>
@@ -439,7 +440,7 @@
             <Pad Id="BG65RJwAdNKPSccDJ8v008" SlotId="PDmB0UWlTTpLYad47W1NUh" Bounds="411,1172" />
             <Pad Id="OQ9LG7W8wizLkoUmS7X8Ly" SlotId="PDmB0UWlTTpLYad47W1NUh" Bounds="876,14" />
             <Node Bounds="761,26,37,19" Id="Nd5BS1rEGyeLRpNcoeQvLd">
-              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="CoreLibBasics.vl">
+              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastDependency="VL.CoreLib.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="OperationCallFlag" Name="NOT" />
               </p:NodeReference>
@@ -449,7 +450,7 @@
             <ControlPoint Id="JNDtn1WDuPGPLsoPrTbXc6" Bounds="761,-18" />
             <ControlPoint Id="OJ4lybLER1AQFrZYoikgyS" Bounds="689,-42" />
             <Node Bounds="721,94,37,19" Id="J5zJLq6dxDYMoLmKELO6FX">
-              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="CoreLibBasics.vl">
+              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastDependency="VL.CoreLib.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="OperationCallFlag" Name="NOT" />
               </p:NodeReference>
@@ -457,26 +458,26 @@
               <Pin Id="D74E2dc9w9FMYZXBXBATOF" Name="Output" Kind="StateOutputPin" />
             </Node>
             <Node Bounds="701,3,25,19" Id="KV937mqacfCLevd9f5h483">
-              <p:NodeReference LastCategoryFullName="Math" LastSymbolSource="CoreLibBasics.vl">
+              <p:NodeReference LastCategoryFullName="Math" LastDependency="VL.CoreLib.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="OperationCallFlag" Name="+" />
               </p:NodeReference>
               <Pin Id="UwdzB75PPjTOfO5bPspxWO" Name="Input" Kind="InputPin" />
               <Pin Id="DC6UlfxUns1Lc8TXnrq7xW" Name="Input 2" Kind="InputPin" DefaultValue="1">
-                <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
                   <Choice Kind="TypeFlag" Name="Integer32" />
                 </p:TypeAnnotation>
               </Pin>
               <Pin Id="R2HRO35AEW0N0ENzdaHGGZ" Name="Output" Kind="OutputPin" />
             </Node>
             <Node Bounds="837,849,81,19" Id="V4kmuYzdf57LCiChi6tGPw">
-              <p:NodeReference LastCategoryFullName="IO.TCP" LastSymbolSource="VL.IO.TCP.vl">
+              <p:NodeReference LastCategoryFullName="IO.TCP" LastDependency="VL.IO.TCP.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="OperationCallFlag" Name="ValidateInputs" />
               </p:NodeReference>
               <Pin Id="Vbb9LT6lT4YPf54syYaTfG" Name="Input" Kind="InputPin" />
               <Pin Id="CKC5j3OXgNhMF5gvabSRl4" Name="Ip Port" Kind="InputPin" DefaultValue=".">
-                <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
                   <Choice Kind="TypeFlag" Name="String" />
                 </p:TypeAnnotation>
               </Pin>
@@ -484,19 +485,23 @@
               <Pin Id="VcGQxLtDuEDP2C18vvf5rm" Name="Output" Kind="OutputPin" />
             </Node>
             <Node Bounds="915,1334,322,514" Id="BSrVrHOYqEtLcQq1IyjszE">
-              <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.dll">
+              <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
                 <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                 <Choice Kind="ApplicationStatefulRegion" Name="If" />
                 <FullNameCategoryReference ID="Primitive" />
               </p:NodeReference>
               <Pin Id="P89xqAEebS3Lo4wwLxyHjo" Name="Condition" Kind="InputPin" />
               <ControlPoint Id="NKJgpdgGAw9M43tasd85j4" Bounds="1131,1340" Alignment="Top" />
-              <ControlPoint Id="Phg4IgErX1mPBPKBKjIReX" Bounds="1108,1710" Alignment="Bottom" />
+              <ControlPoint Id="Phg4IgErX1mPBPKBKjIReX" Bounds="1108,1842" Alignment="Bottom" />
+              <ControlPoint Id="D9RdYzk05TRMslhG68BOEE" Bounds="949,1340" Alignment="Top" />
+              <ControlPoint Id="PY3sSaoUmv0OPUO91Uf9qi" Bounds="959,1842" Alignment="Bottom" />
+              <ControlPoint Id="EK6FfTRXYCvLNbQg32Wsrv" Bounds="1212,1340" Alignment="Top" />
+              <ControlPoint Id="LBkpI483xtQN2kdsS83hqP" Bounds="1193,1842" Alignment="Bottom" />
               <Patch Id="VS5oiAKvIKQOFHTtRovtqG" ManuallySortedPins="true">
                 <Patch Id="SaWDvhDun06LPw3l0A3Nhd" Name="Create" ManuallySortedPins="true" />
                 <Patch Id="KGCLXVW37ppNb9mj8Z4uFF" Name="Then" ManuallySortedPins="true" />
                 <Node Bounds="975,1357,48,19" Id="SSIFkDs8PhUMjBGE0qvwzk">
-                  <p:NodeReference LastCategoryFullName="Primitive.Object" LastSymbolSource="CoreLibBasics.vl">
+                  <p:NodeReference LastCategoryFullName="Primitive.Object" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="CastAs" />
                   </p:NodeReference>
@@ -506,7 +511,7 @@
                   <Pin Id="Muh70R4pInfNRyqZEglxtm" Name="Success" Kind="OutputPin" />
                 </Node>
                 <Node Bounds="971,1418,98,80" Id="K1qHnrk5ajPPMm4qgm3sXW">
-                  <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.dll">
+                  <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
                     <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                     <Choice Kind="ApplicationStatefulRegion" Name="If" />
                     <CategoryReference Kind="Category" Name="Primitive" />
@@ -516,15 +521,15 @@
                     <Patch Id="MzaqzUv47gkQK714Ycg95P" Name="Create" ManuallySortedPins="true" />
                     <Patch Id="E0FWCRZOfBHNeXMpcLGnIP" Name="Then" ManuallySortedPins="true" />
                     <Node Bounds="983,1446,74,26" Id="BeCaBp3w5FaQHRoRbaE2HF">
-                      <p:NodeReference LastCategoryFullName="SuperSimpleTcp.SimpleTcpClient" LastSymbolSource="SuperSimpleTcp.dll" OverloadStrategy="AllPinsThatAreNotCommon">
+                      <p:NodeReference LastCategoryFullName="SuperSimpleTcp.SimpleTcpClient" LastDependency="SuperSimpleTcp.dll" OverloadStrategy="AllPinsThatAreNotCommon">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <Choice Kind="OperationCallFlag" Name="Send" />
                         <CategoryReference Kind="AssemblyCategory" Name="SimpleTcpClient" NeedsToBeDirectParent="true" />
                         <PinReference Kind="InputPin" Name="Data">
-                          <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="System" LastSymbolSource="mscorlib.dll">
+                          <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="System" LastDependency="mscorlib.dll">
                             <Choice Kind="TypeFlag" Name="Array`1" />
                             <p:TypeArguments>
-                              <TypeReference LastCategoryFullName="System" LastSymbolSource="mscorlib.dll">
+                              <TypeReference LastCategoryFullName="System" LastDependency="mscorlib.dll">
                                 <Choice Kind="TypeFlag" Name="Byte" />
                               </TypeReference>
                             </p:TypeArguments>
@@ -538,7 +543,7 @@
                   </Patch>
                 </Node>
                 <Node Bounds="938,1551,287,277" Id="R26rdeV5iRdQBKJbQduKTg">
-                  <p:NodeReference>
+                  <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
                     <Choice Kind="ApplicationStatefulRegion" Name="If" />
                     <FullNameCategoryReference ID="Primitive" />
                   </p:NodeReference>
@@ -547,7 +552,7 @@
                     <Patch Id="L7vtYQHSOC6POx2rSBKOUs" Name="Create" ManuallySortedPins="true" />
                     <Patch Id="GaSx2ISFyGMM7yZ4lDjffH" Name="Then" ManuallySortedPins="true" />
                     <Node Bounds="950,1782,74,26" Id="B4D9CLoGSZBMOziz5zl6Mv">
-                      <p:NodeReference LastCategoryFullName="SuperSimpleTcp.SimpleTcpClient" LastSymbolSource="SuperSimpleTcp.dll" OverloadStrategy="AllPinsThatAreNotCommon">
+                      <p:NodeReference LastCategoryFullName="SuperSimpleTcp.SimpleTcpClient" LastDependency="SuperSimpleTcp.dll" OverloadStrategy="AllPinsThatAreNotCommon">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <Choice Kind="OperationCallFlag" Name="Send" />
                         <CategoryReference Kind="AssemblyCategory" Name="SimpleTcpClient" NeedsToBeDirectParent="true" />
@@ -560,7 +565,7 @@
                       <Pin Id="BRAwBiP4xR6M57JhUN8WbF" Name="Output" Kind="StateOutputPin" />
                     </Node>
                     <Node Bounds="966,1622,97,26" Id="Fetd7nRocbfLJE5MORzbl4">
-                      <p:NodeReference LastCategoryFullName="System.Collections.Generic.IReadOnlyCollection`1" LastSymbolSource="System.Runtime.dll">
+                      <p:NodeReference LastCategoryFullName="System.Collections.Generic.IReadOnlyCollection`1" LastDependency="System.Runtime.dll">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <Choice Kind="OperationCallFlag" Name="Count" />
                         <CategoryReference Kind="AssemblyCategory" Name="IReadOnlyCollection`1" NeedsToBeDirectParent="true" />
@@ -569,20 +574,20 @@
                       <Pin Id="OakFuYSAnzvLucKD31NZ8g" Name="Output" Kind="StateOutputPin" />
                       <Pin Id="RuVNdXCRoNHN1w55oIJZvx" Name="Count" Kind="OutputPin" />
                     </Node>
-                    <Node Bounds="1117,1626,96,86" Id="Vd5KQD1kYEaPQVvq7YIJiN">
-                      <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.dll">
+                    <Node Bounds="1117,1626,96,87" Id="Vd5KQD1kYEaPQVvq7YIJiN">
+                      <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
                         <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                         <Choice Kind="ApplicationStatefulRegion" Name="ForEach" />
                         <CategoryReference Kind="Category" Name="Primitive" />
                       </p:NodeReference>
                       <Pin Id="KlMbAs32CvaQDyUBnHds9M" Name="Break" Kind="OutputPin" />
-                      <ControlPoint Id="MDD9ocktho1OpGBLgYxGgr" Bounds="1196,1633" Alignment="Top" />
+                      <ControlPoint Id="MDD9ocktho1OpGBLgYxGgr" Bounds="1196,1632" Alignment="Top" />
                       <Patch Id="VFgY7XpFnSAPEgkFWJAdRE" ManuallySortedPins="true">
                         <Patch Id="UxM1jtCis1LNpAX8HhzFjX" Name="Create" ManuallySortedPins="true" />
                         <Patch Id="MFfI1lBgLFxOM6JETRKrRF" Name="Update" ManuallySortedPins="true" />
                         <Patch Id="IFaNz6VOGJiMPbxofwukrX" Name="Dispose" ManuallySortedPins="true" />
-                        <Node Bounds="1129,1653,70,19" Id="BTpbZOzlOphLyI4ClLwv2K">
-                          <p:NodeReference LastCategoryFullName="System.IO.MemoryStream" LastSymbolSource="mscorlib.dll">
+                        <Node Bounds="1129,1653,70,26" Id="BTpbZOzlOphLyI4ClLwv2K">
+                          <p:NodeReference LastCategoryFullName="System.IO.MemoryStream" LastDependency="mscorlib.dll">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <CategoryReference Kind="AssemblyCategory" Name="MemoryStream" />
                             <Choice Kind="OperationCallFlag" Name="WriteByte" />
@@ -592,11 +597,11 @@
                           <Pin Id="VFrE644I3CpQMjkn0pByVu" Name="Output" Kind="StateOutputPin" />
                         </Node>
                       </Patch>
-                      <ControlPoint Id="FzBZdQjxXvaNxkjaYjgdUy" Bounds="1131,1633" Alignment="Top" />
+                      <ControlPoint Id="FzBZdQjxXvaNxkjaYjgdUy" Bounds="1131,1632" Alignment="Top" />
                       <ControlPoint Id="NzvbgfolB7JQO0SxbP71OQ" Bounds="1131,1707" Alignment="Bottom" />
                     </Node>
-                    <Node Bounds="1129,1574,70,19" Id="PcKZROiOotONVdjJAJmbFe">
-                      <p:NodeReference LastCategoryFullName="System.IO.MemoryStream" LastSymbolSource="mscorlib.dll">
+                    <Node Bounds="1129,1574,70,26" Id="PcKZROiOotONVdjJAJmbFe">
+                      <p:NodeReference LastCategoryFullName="System.IO.MemoryStream" LastDependency="mscorlib.dll">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <CategoryReference Kind="AssemblyCategory" Name="MemoryStream" NeedsToBeDirectParent="true" />
                         <Choice Kind="OperationCallFlag" Name="SetLength" />
@@ -606,7 +611,7 @@
                       <Pin Id="I0IcGwzx6VnLsAKHWtSGus" Name="Output" Kind="StateOutputPin" />
                     </Node>
                     <Node Bounds="1129,1733,70,26" Id="KgqRch7Iu4tNbH91lSkVna">
-                      <p:NodeReference LastCategoryFullName="System.IO.MemoryStream" LastSymbolSource="mscorlib.dll">
+                      <p:NodeReference LastCategoryFullName="System.IO.MemoryStream" LastDependency="mscorlib.dll">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <Choice Kind="OperationCallFlag" Name="SetPosition" />
                         <CategoryReference Kind="AssemblyCategory" Name="MemoryStream" NeedsToBeDirectParent="true" />
@@ -618,7 +623,7 @@
                   </Patch>
                 </Node>
                 <Node Bounds="936,1512,37,19" Id="IhitIoOvMZbQHzcX4FIy1p">
-                  <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="CoreLibBasics.vl">
+                  <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="NOT" />
                     <CategoryReference Kind="BooleanType" Name="Boolean" NeedsToBeDirectParent="true" />
@@ -627,20 +632,16 @@
                   <Pin Id="UqQTsewq1c4PhmnK13xdEr" Name="Output" Kind="StateOutputPin" />
                 </Node>
               </Patch>
-              <ControlPoint Id="D9RdYzk05TRMslhG68BOEE" Bounds="949,1340" Alignment="Top" />
-              <ControlPoint Id="PY3sSaoUmv0OPUO91Uf9qi" Bounds="959,1800" Alignment="Bottom" />
-              <ControlPoint Id="EK6FfTRXYCvLNbQg32Wsrv" Bounds="1212,1340" Alignment="Top" />
-              <ControlPoint Id="LBkpI483xtQN2kdsS83hqP" Bounds="1193,1842" Alignment="Bottom" />
             </Node>
             <ControlPoint Id="FoSpHPdkkr8Nx0EtaizexU" Bounds="1211,1153" />
             <Node Bounds="855,1167,81,19" Id="TNJlIzJh6f0NrjsCqpX6Vy">
-              <p:NodeReference>
+              <p:NodeReference LastCategoryFullName="IO.TCP" LastDependency="VL.IO.TCP.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="OperationCallFlag" Name="ValidateInputs (Data)" />
               </p:NodeReference>
               <Pin Id="OfoKLbOerBSPOdRnk8ez5L" Name="Input" Kind="InputPin" />
               <Pin Id="L8xynCG9lXwNec6HA3JIiz" Name="Ip Port" Kind="InputPin" DefaultValue=".">
-                <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
                   <Choice Kind="TypeFlag" Name="String" />
                 </p:TypeAnnotation>
               </Pin>
@@ -648,8 +649,8 @@
               <Pin Id="KJx9sKI9TdgMeLdap1Jxim" Name="Output" Kind="OutputPin" />
             </Node>
             <ControlPoint Id="MlP4jfhA6nENT5ViJqVKF6" Bounds="1069,783" />
-            <Node Bounds="581,129,25,19" Id="Lgw4tFZotsDOTwmnGjzqdq">
-              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="CoreLibBasics.vl">
+            <Node Bounds="581,129,30,19" Id="Lgw4tFZotsDOTwmnGjzqdq">
+              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastDependency="VL.CoreLib.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="OperationCallFlag" Name="OR" />
                 <CategoryReference Kind="BooleanType" Name="Boolean" NeedsToBeDirectParent="true" />
@@ -658,8 +659,8 @@
               <Pin Id="RjUqeJyhCkINPFrIEPEsS3" Name="Input 2" Kind="InputPin" />
               <Pin Id="DNBPP227nCiNngAXX2JBpF" Name="Output" Kind="StateOutputPin" />
             </Node>
-            <Node Bounds="840,956,37,19" Id="Mpvnr3EVnwZO1XKqUaPu3Q">
-              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="CoreLibBasics.vl">
+            <Node Bounds="840,956,45,19" Id="Mpvnr3EVnwZO1XKqUaPu3Q">
+              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastDependency="VL.CoreLib.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="OperationCallFlag" Name="AND" />
                 <CategoryReference Kind="BooleanType" Name="Boolean" NeedsToBeDirectParent="true" />
@@ -671,7 +672,7 @@
             </Node>
             <Pad Id="QMwWVcMqszNPROZiqz3pNX" SlotId="PDmB0UWlTTpLYad47W1NUh" Bounds="908,904" />
             <Node Bounds="857,1263,45,19" Id="DAntBzbBpr0PNb9kEQESrY">
-              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="CoreLibBasics.vl">
+              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastDependency="VL.CoreLib.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="OperationCallFlag" Name="AND" />
                 <CategoryReference Kind="BooleanType" Name="Boolean" NeedsToBeDirectParent="true" />
@@ -683,8 +684,8 @@
             </Node>
             <Pad Id="J1DIsUqsLzFQTSK45LqEhU" SlotId="PDmB0UWlTTpLYad47W1NUh" Bounds="891,1232" Value="True" />
             <ControlPoint Id="LPrj7xTBwRdNu1CSLuDqqP" Bounds="432,850" />
-            <Node Bounds="944,835" Id="VfNBCJANLO7PmdN5iDSAMF">
-              <p:NodeReference LastCategoryFullName="Math" LastSymbolSource="CoreLibBasics.vl">
+            <Node Bounds="944,835,25,19" Id="VfNBCJANLO7PmdN5iDSAMF">
+              <p:NodeReference LastCategoryFullName="Math" LastDependency="VL.CoreLib.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="OperationCallFlag" Name="+" />
               </p:NodeReference>
@@ -696,7 +697,7 @@
             <ControlPoint Id="AS1b17GXFE1MTc5TR4uGTm" Bounds="930,1237" />
             <ControlPoint Id="PTMRFk0EVvxNxCZwkjIiUr" Bounds="1092,911" />
             <Node Bounds="1129,1265,70,26" Id="RbM5izuWWAmLAdjoBkO7wI">
-              <p:NodeReference LastCategoryFullName="System.IO.MemoryStream" LastSymbolSource="mscorlib.dll">
+              <p:NodeReference LastCategoryFullName="System.IO.MemoryStream" LastDependency="mscorlib.dll">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <CategoryReference Kind="AssemblyCategory" Name="MemoryStream" />
                 <Choice Kind="OperationCallFlag" Name="Create" />
@@ -814,58 +815,6 @@
           <Link Id="JOBJDvI6eTeOam0bNhKIc1" Ids="Sz9NLD1J8aqL5Bgd5CuCZ1,AS1b17GXFE1MTc5TR4uGTm" IsHidden="true" />
           <Link Id="KMoXtF04Q3ROOJQKT3TCSq" Ids="PTMRFk0EVvxNxCZwkjIiUr,O4sR1G57lUjM8KGmZW6VWq" />
           <Link Id="MkLBTe7DcTmPVZWDzwOipC" Ids="K9fOHVxSbRWL7bQBQaXWzD,PTMRFk0EVvxNxCZwkjIiUr" IsHidden="true" />
-          <Patch Id="TswCFh03KvYPpAZToL4TxH" Name="Create (Internal)" ParticipatingElements="RbM5izuWWAmLAdjoBkO7wI" />
-          <Patch Id="LsOxqIbO2NNPPPqwm3o1hN" Name="Update (Internal)" ManuallySortedPins="true">
-            <Pin Id="CDeeT4WH9vJNYT51dg2mNx" Name="Server" Kind="InputPin" Bounds="378,260" DefaultValue="127.0.0.1" Summary="Specify as IP or Hostname">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="String" />
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="RmSMrD0PvegLo50EeEAzOv" Name="Port" Kind="InputPin" Bounds="469,259" DefaultValue="4444">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Integer32" />
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="Ni29f6iNpMKLMcXqnAof4g" Name="Connection Timeout" Kind="InputPin" Bounds="550,645" DefaultValue="5" Summary="In Seconds">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Integer32" />
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="RmrEfmMnIjjNDJxN3mgE2L" Name="Auto Reconnect" Kind="InputPin" Bounds="674,176" DefaultValue="True">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Boolean" />
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="SZmYSo3hiw6Pz2JLfOJevQ" Name="Enabled" Kind="InputPin" DefaultValue="True">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Boolean" />
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="RMtA9LjFBN2LAAKlRyVZOI" Name="Data" Kind="OutputPin" Bounds="860,909" />
-            <Pin Id="NRcXdUB8xtxOH4B4T7fRet" Name="Statistics" Kind="OutputPin" Bounds="536,981" />
-            <Pin Id="MJohdq3xCohLaepVBdksNi" Name="Is Connected" Kind="OutputPin" Bounds="235,1031" />
-            <Pin Id="BySfHHSCgaONk4SCgDvzqc" Name="Status" Kind="OutputPin" Bounds="432,850" />
-          </Patch>
-          <Patch Id="CBsWXB77jJUNEp4W1x8iqV" Name="Dispose (Internal)" />
-          <Patch Id="QgnkHnhkq49PNpAJ0HB8Oj" Name="SendString">
-            <Pin Id="Uq14yB9yQ7jMWUiOmerA7A" Name="Data" Kind="InputPin" Bounds="636,640" />
-            <Pin Id="LPOVALCPu0oNWvgf1lbF8k" Name="Terminator" Kind="InputPin" Bounds="978,804" DefaultValue="&#xD;&#xA;" Summary="Defaults to CRLF, also known as #13#10 or \r\n" />
-            <Pin Id="Jrs2GprMMitOdhBpoNeaUG" Name="Encoding" Kind="InputPin" />
-            <Pin Id="K9fOHVxSbRWL7bQBQaXWzD" Name="Apply" Kind="InputPin" Bounds="915,931" />
-          </Patch>
-          <Patch Id="UMBVVaAbQqsN6E0cGJE8BW" Name="SendData" ManuallySortedPins="true">
-            <Pin Id="HeCTrIVDVvXQTYJc4XLoie" Name="Data" Kind="InputPin">
-              <p:TypeAnnotation>
-                <Choice Kind="TypeFlag" Name="IReadOnlyList" />
-                <p:TypeArguments>
-                  <TypeReference>
-                    <Choice Kind="TypeFlag" Name="Byte" />
-                  </TypeReference>
-                </p:TypeArguments>
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="Sz9NLD1J8aqL5Bgd5CuCZ1" Name="Apply" Kind="InputPin" Bounds="925,1169" />
-          </Patch>
           <Link Id="AUt81au7j8kL1iBW4WCSYH" Ids="KjSsT6GkflaOHj2qeaHBuT,KoBYgjKuM25MNUqgDA5sdB" />
           <Link Id="HP6hftycJmQMfJ7OfIr4tH" Ids="NKJgpdgGAw9M43tasd85j4,Phg4IgErX1mPBPKBKjIReX" IsFeedback="true" />
           <Link Id="KPZJDPMdDpaLhlab97w1BY" Ids="KoBYgjKuM25MNUqgDA5sdB,NKJgpdgGAw9M43tasd85j4" />
@@ -895,6 +844,58 @@
           <Link Id="Gt1Y0jgzn0OMuVcn6Mn9aD" Ids="Ng5dgVf8Z9qLOfuyVyiPUr,E9spmG9jJyVOts7Sqeuxn7" IsHidden="true" />
           <Link Id="VN7ymXKtkowQCBZdyngi0o" Ids="QzfaIi2g1uwOOXQLQGkFyJ,Ng5dgVf8Z9qLOfuyVyiPUr" />
           <Link Id="K5y84QV6X3hLVXmNKpFrPe" Ids="HjWk2CCPl0wMbVVKYfAppZ,RXoTyen7bESMgeoHBeYXx9" />
+          <Patch Id="TswCFh03KvYPpAZToL4TxH" Name="Create (Internal)" ParticipatingElements="RbM5izuWWAmLAdjoBkO7wI" />
+          <Patch Id="LsOxqIbO2NNPPPqwm3o1hN" Name="Update (Internal)" ManuallySortedPins="true">
+            <Pin Id="CDeeT4WH9vJNYT51dg2mNx" Name="Server" Kind="InputPin" Bounds="378,260" DefaultValue="127.0.0.1" Summary="Specify as IP or Hostname">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="RmSMrD0PvegLo50EeEAzOv" Name="Port" Kind="InputPin" Bounds="469,259" DefaultValue="4444">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                <Choice Kind="TypeFlag" Name="Integer32" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="Ni29f6iNpMKLMcXqnAof4g" Name="Connection Timeout" Kind="InputPin" Bounds="550,645" DefaultValue="5" Summary="In Seconds">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                <Choice Kind="TypeFlag" Name="Integer32" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="RmrEfmMnIjjNDJxN3mgE2L" Name="Auto Reconnect" Kind="InputPin" Bounds="674,176" DefaultValue="True">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="SZmYSo3hiw6Pz2JLfOJevQ" Name="Enabled" Kind="InputPin" DefaultValue="True">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="RMtA9LjFBN2LAAKlRyVZOI" Name="Data" Kind="OutputPin" Bounds="860,909" />
+            <Pin Id="NRcXdUB8xtxOH4B4T7fRet" Name="Statistics" Kind="OutputPin" Bounds="536,981" />
+            <Pin Id="MJohdq3xCohLaepVBdksNi" Name="Is Connected" Kind="OutputPin" Bounds="235,1031" />
+            <Pin Id="BySfHHSCgaONk4SCgDvzqc" Name="Status" Kind="OutputPin" Bounds="432,850" />
+          </Patch>
+          <Patch Id="CBsWXB77jJUNEp4W1x8iqV" Name="Dispose (Internal)" />
+          <Patch Id="QgnkHnhkq49PNpAJ0HB8Oj" Name="SendString">
+            <Pin Id="Uq14yB9yQ7jMWUiOmerA7A" Name="Data" Kind="InputPin" Bounds="636,640" />
+            <Pin Id="LPOVALCPu0oNWvgf1lbF8k" Name="Terminator" Kind="InputPin" Bounds="978,804" DefaultValue="&#xD;&#xA;" Summary="Defaults to CRLF, also known as #13#10 or \r\n" />
+            <Pin Id="Jrs2GprMMitOdhBpoNeaUG" Name="Encoding" Kind="InputPin" />
+            <Pin Id="K9fOHVxSbRWL7bQBQaXWzD" Name="Apply" Kind="InputPin" Bounds="915,931" />
+          </Patch>
+          <Patch Id="UMBVVaAbQqsN6E0cGJE8BW" Name="SendData" ManuallySortedPins="true">
+            <Pin Id="HeCTrIVDVvXQTYJc4XLoie" Name="Data" Kind="InputPin">
+              <p:TypeAnnotation LastCategoryFullName="Collections.Interfaces" LastDependency="VL.CoreLib.vl">
+                <Choice Kind="TypeFlag" Name="IReadOnlyList" />
+                <p:TypeArguments>
+                  <TypeReference>
+                    <Choice Kind="TypeFlag" Name="Byte" />
+                  </TypeReference>
+                </p:TypeArguments>
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="Sz9NLD1J8aqL5Bgd5CuCZ1" Name="Apply" Kind="InputPin" Bounds="925,1169" />
+          </Patch>
         </Patch>
       </Node>
       <!--
@@ -903,52 +904,59 @@
 
 -->
       <Node Name="TCPServer" Bounds="205,296" Id="VQcVMNGh6NDQdx5bXUHjBj">
-        <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+        <p:NodeReference LastCategoryFullName="Primitive" LastDependency="builtin">
           <Choice Kind="ClassDefinition" Name="Class" />
         </p:NodeReference>
         <Patch Id="Jvd7C7QcGKELD3lbVP9F0X">
           <Canvas Id="K0LPeWM5T84NSqXn90eFyD" CanvasType="Group">
-            <Node Bounds="330,170,289,388" Id="A0z4TgevWHQLMvCcIbg10Y">
-              <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.dll">
+            <Node Bounds="310,168,344,711" Id="A0z4TgevWHQLMvCcIbg10Y">
+              <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
                 <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                 <Choice Kind="ProcessStatefulRegion" Name="Cache" />
                 <FullNameCategoryReference ID="Primitive" />
               </p:NodeReference>
+              <ControlPoint Id="ElvHjTN838VPWZwCkm8YnZ" Bounds="378,174" Alignment="Top" />
+              <ControlPoint Id="MdR5e5dO1l7MSnSXN4bGH4" Bounds="398,174" Alignment="Top" />
+              <ControlPoint Id="I06MmzoOR5APUmFLmmkxV7" Bounds="376,873" Alignment="Bottom" />
               <Pin Id="EoBVLNxNxZqPR8G5r043tf" Name="Force" Kind="InputPin" />
-              <Pin Id="Jgm9Xb6YcdQMxlRaYcRbpr" Name="Dispose Cached Outputs" Kind="InputPin" DefaultValue="True">
-                <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Pin Id="Jgm9Xb6YcdQMxlRaYcRbpr" Name="Dispose Cached Outputs" Kind="InputPin" DefaultValue="False">
+                <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
                   <Choice Kind="TypeFlag" Name="Boolean" />
                 </p:TypeAnnotation>
               </Pin>
               <Pin Id="KokNpCrx7LROOjTErBqlLX" Name="Has Changed" Kind="OutputPin" />
-              <ControlPoint Id="ElvHjTN838VPWZwCkm8YnZ" Bounds="398,177" Alignment="Top" />
-              <ControlPoint Id="MdR5e5dO1l7MSnSXN4bGH4" Bounds="418,177" Alignment="Top" />
-              <ControlPoint Id="I06MmzoOR5APUmFLmmkxV7" Bounds="396,477" Alignment="Bottom" />
               <Patch Id="Nck3gNnGo77NmqxnaRu9uG" ManuallySortedPins="true">
                 <Patch Id="BFxOQmz02bdOdwuXvcSrz9" Name="Create" ManuallySortedPins="true" />
                 <Patch Id="QIQR3UM570NMh84Ge4j3hZ" Name="Then" ManuallySortedPins="true" />
-                <Node Bounds="353,256,254,282" Id="OQzZ3efpyNyPnRVa6MZRCH">
-                  <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.dll">
+                <Node Bounds="333,278,304,342" Id="OQzZ3efpyNyPnRVa6MZRCH">
+                  <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
                     <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                     <Choice Kind="ApplicationStatefulRegion" Name="If" />
                     <FullNameCategoryReference ID="Primitive" />
                   </p:NodeReference>
                   <Pin Id="KNerA5YKjExO8I15oxkJhG" Name="Condition" Kind="InputPin" />
-                  <ControlPoint Id="SCMyKMnJmCFP1j3MK2fGj0" Bounds="398,450" Alignment="Bottom" />
-                  <ControlPoint Id="OS56Rj2HekNLyfS4n88BfH" Bounds="398,262" Alignment="Top" />
+                  <ControlPoint Id="SCMyKMnJmCFP1j3MK2fGj0" Bounds="378,614" Alignment="Bottom" />
+                  <ControlPoint Id="OS56Rj2HekNLyfS4n88BfH" Bounds="378,284" Alignment="Top" />
                   <Patch Id="RjCxngTBb3jOSh2xHy58wG" ManuallySortedPins="true">
                     <Patch Id="K8PwltCgESdNyButSmufcI" Name="Create" ManuallySortedPins="true" />
                     <Patch Id="DM5aXUUfVm6QYDPfLjSYjG" Name="Then" ManuallySortedPins="true" />
-                    <Node Bounds="384,301,261,273" Id="Gp3nKkFij90MLAd3on2NFw">
-                      <p:NodeReference LastCategoryFullName="Control" LastSymbolSource="CoreLibBasics.vl">
+                    <Node Bounds="364,323,261,277" Id="Gp3nKkFij90MLAd3on2NFw">
+                      <p:NodeReference LastCategoryFullName="Control" LastDependency="VL.CoreLib.vl">
                         <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                         <Choice Kind="ProcessAppFlag" Name="Try" />
                       </p:NodeReference>
+                      <ControlPoint Id="DQWmI2gIwzyMgFMS6jeSnQ" Bounds="378,594" Alignment="Bottom" />
+                      <Pin Id="LBuFX0qkxBJMxN62pEVM5a" Name="Stick To Last Valid Outputs" Kind="InputPin" />
+                      <Pin Id="QBbv4KT2okqMOq0VIqpXh6" Name="Reset Region On Failure" Kind="InputPin" />
+                      <Pin Id="UrY4nHDE6ivQYSzrrpQTkQ" Name="Success" Kind="OutputPin" />
+                      <Pin Id="Jkw9wtmMBzGLRFat6LNocc" Name="Failure" Kind="OutputPin" />
+                      <Pin Id="IocFcbeIMaMO469ISgqumq" Name="Error Message" Kind="OutputPin" />
+                      <Pin Id="CzKeR6qnVW2QD4Vvt63doy" Name="Exceptions" Kind="OutputPin" />
                       <Patch Id="JiuCiLhb5dJNx4Gpud4sVY" ManuallySortedPins="true">
                         <Patch Id="LLwLZMfDEQ6Mpggy8bgqdO" Name="Create" ManuallySortedPins="true" />
                         <Patch Id="I19OdtGchTQOJJi6OYGEGd" Name="Update" ManuallySortedPins="true" />
-                        <Node Bounds="396,357,85,26" Id="H4T39JSCkMiLPxADKSLytc">
-                          <p:NodeReference LastCategoryFullName="SuperSimpleTcp.SimpleTcpServer" LastSymbolSource="SuperSimpleTcp.dll">
+                        <Node Bounds="376,379,85,26" Id="H4T39JSCkMiLPxADKSLytc">
+                          <p:NodeReference LastCategoryFullName="SuperSimpleTcp.SimpleTcpServer" LastDependency="SuperSimpleTcp.dll">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <Choice Kind="OperationCallFlag" Name="Create" />
                             <CategoryReference Kind="AssemblyCategory" Name="SimpleTcpServer" NeedsToBeDirectParent="true" />
@@ -958,8 +966,8 @@
                           <Pin Id="CCLJjawitLAOobjBqc087U" Name="Port" Kind="InputPin" />
                           <Pin Id="G6tPfbj30IyNvXS8t8Vy0u" Name="Output" Kind="StateOutputPin" />
                         </Node>
-                        <Node Bounds="396,528,75,26" Id="GtbANTvwQDBNdZjCbtUomR">
-                          <p:NodeReference LastCategoryFullName="SuperSimpleTcp.SimpleTcpServer" LastSymbolSource="SuperSimpleTcp.dll">
+                        <Node Bounds="376,550,75,26" Id="GtbANTvwQDBNdZjCbtUomR">
+                          <p:NodeReference LastCategoryFullName="SuperSimpleTcp.SimpleTcpServer" LastDependency="SuperSimpleTcp.dll">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <Choice Kind="OperationCallFlag" Name="Start" />
                             <CategoryReference Kind="AssemblyCategory" Name="SimpleTcpServer" NeedsToBeDirectParent="true" />
@@ -967,8 +975,8 @@
                           <Pin Id="KTwaKkvIuHqOP1liFc716a" Name="Input" Kind="StateInputPin" />
                           <Pin Id="M6jJrRsjdIYOOKcWviDPTn" Name="Output" Kind="StateOutputPin" />
                         </Node>
-                        <Node Bounds="396,404,75,26" Id="DxFbUIoA8iXNbS6IoUs1o7">
-                          <p:NodeReference LastCategoryFullName="SuperSimpleTcp.SimpleTcpServer" LastSymbolSource="SuperSimpleTcp.dll">
+                        <Node Bounds="376,426,75,26" Id="DxFbUIoA8iXNbS6IoUs1o7">
+                          <p:NodeReference LastCategoryFullName="SuperSimpleTcp.SimpleTcpServer" LastDependency="SuperSimpleTcp.dll">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <Choice Kind="OperationCallFlag" Name="SetLogger" />
                             <CategoryReference Kind="AssemblyCategory" Name="SimpleTcpServer" NeedsToBeDirectParent="true" />
@@ -977,31 +985,31 @@
                           <Pin Id="Oggv5iYV0psMFC5yPzUfvf" Name="Value" Kind="InputPin" />
                           <Pin Id="Qm2knnQ0q3QO6VqH7hD8Bd" Name="Output" Kind="StateOutputPin" />
                         </Node>
-                        <Node Bounds="501,351,82,92" Id="PQ1hKBA7DJKPjCtDWcLxrC">
-                          <p:NodeReference>
+                        <Node Bounds="481,373,82,92" Id="PQ1hKBA7DJKPjCtDWcLxrC">
+                          <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
                             <Choice Kind="ApplicationRegion" Name="Delegate" />
                             <FullNameCategoryReference ID="Primitive" />
                           </p:NodeReference>
                           <Pin Id="KYb5uG7SWW5Nxn3BzUbiIl" Name="Functionality" Kind="OutputPin" />
                           <Patch Id="RY6pxsY5ikJOqBOuUAgFcz" ManuallySortedPins="true">
                             <Pin Id="CHOC2in7YtuLxSgeqPn9f8" Name="Arg" Kind="InputPin" />
-                            <ControlPoint Id="BtY7jjQ0QPkNCxd3jjIsxS" Bounds="515,369" />
-                            <Node Bounds="513,397,58,26" Id="LVl5Hqu1j8AL2rZPEViEvu">
-                              <p:NodeReference LastCategoryFullName="System.Console" LastSymbolSource="CoreLibBasics.vl">
+                            <ControlPoint Id="BtY7jjQ0QPkNCxd3jjIsxS" Bounds="495,391" />
+                            <Node Bounds="493,419,58,26" Id="LVl5Hqu1j8AL2rZPEViEvu">
+                              <p:NodeReference LastCategoryFullName="System.Console" LastDependency="VL.CoreLib.vl">
                                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                                 <Choice Kind="OperationCallFlag" Name="WriteLine" />
                               </p:NodeReference>
                               <Pin Id="GFZihM73jhCOIZAS872yQb" Name="Value" Kind="InputPin" />
                               <Pin Id="KruNPyA9V5IMSO7hUcANu9" Name="Apply" Kind="InputPin" DefaultValue="True">
-                                <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                                <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
                                   <Choice Kind="TypeFlag" Name="Boolean" />
                                 </p:TypeAnnotation>
                               </Pin>
                             </Node>
                           </Patch>
                         </Node>
-                        <Node Bounds="397,475" Id="RD2aQcgMxJvOo8kvzMQkRT">
-                          <p:NodeReference LastCategoryFullName="SuperSimpleTcp.SimpleTcpServer" LastSymbolSource="SuperSimpleTcp.dll">
+                        <Node Bounds="377,497,75,26" Id="RD2aQcgMxJvOo8kvzMQkRT">
+                          <p:NodeReference LastCategoryFullName="SuperSimpleTcp.SimpleTcpServer" LastDependency="SuperSimpleTcp.dll">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <Choice Kind="OperationCallFlag" Name="SetKeepalive" />
                             <CategoryReference Kind="AssemblyCategory" Name="SimpleTcpServer" NeedsToBeDirectParent="true" />
@@ -1010,16 +1018,16 @@
                           <Pin Id="JjeegGbHltSLnwxIUKWxCm" Name="Value" Kind="InputPin" />
                           <Pin Id="OiYZxgvXKhrOxPjJgFcqQG" Name="Output" Kind="StateOutputPin" />
                         </Node>
-                        <Node Bounds="508,454,115,26" Id="FpcTDacaQVCM2FGxzLHZ5V">
-                          <p:NodeReference LastCategoryFullName="SuperSimpleTcp.SimpleTcpKeepaliveSettings" LastSymbolSource="SuperSimpleTcp.dll">
+                        <Node Bounds="488,476,115,26" Id="FpcTDacaQVCM2FGxzLHZ5V">
+                          <p:NodeReference LastCategoryFullName="SuperSimpleTcp.SimpleTcpKeepaliveSettings" LastDependency="SuperSimpleTcp.dll">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <CategoryReference Kind="AssemblyCategory" Name="SimpleTcpKeepaliveSettings" />
                             <Choice Kind="OperationCallFlag" Name="Create" />
                           </p:NodeReference>
                           <Pin Id="StDnD4oyuvBPHIcaDkmzgb" Name="Output" Kind="StateOutputPin" />
                         </Node>
-                        <Node Bounds="507,487,126,26" Id="Q3PUH7ga25ULT64czCsvng">
-                          <p:NodeReference LastCategoryFullName="SuperSimpleTcp.SimpleTcpKeepaliveSettings" LastSymbolSource="SuperSimpleTcp.dll">
+                        <Node Bounds="487,509,126,26" Id="Q3PUH7ga25ULT64czCsvng">
+                          <p:NodeReference LastCategoryFullName="SuperSimpleTcp.SimpleTcpKeepaliveSettings" LastDependency="SuperSimpleTcp.dll">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <Choice Kind="OperationCallFlag" Name="SetEnableTcpKeepAlives" />
                           </p:NodeReference>
@@ -1028,17 +1036,13 @@
                           <Pin Id="K3WrcYF4EAhLpfckpnQqrR" Name="Output" Kind="StateOutputPin" />
                         </Node>
                       </Patch>
-                      <Pin Id="LBuFX0qkxBJMxN62pEVM5a" Name="Stick To Last Valid Outputs" Kind="InputPin" />
-                      <Pin Id="QBbv4KT2okqMOq0VIqpXh6" Name="Reset Region On Failure" Kind="InputPin" />
-                      <Pin Id="UrY4nHDE6ivQYSzrrpQTkQ" Name="Success" Kind="OutputPin" />
-                      <Pin Id="IocFcbeIMaMO469ISgqumq" Name="Error Message" Kind="OutputPin" />
-                      <Pin Id="Jkw9wtmMBzGLRFat6LNocc" Name="Failure" Kind="OutputPin" />
-                      <ControlPoint Id="DQWmI2gIwzyMgFMS6jeSnQ" Bounds="403,488" Alignment="Bottom" />
                     </Node>
                   </Patch>
+                  <ControlPoint Id="JHvyCHfVvfcQDIwM5Fn0Sv" Bounds="498,284" Alignment="Top" />
+                  <ControlPoint Id="QBBxAy3bPA5M5rcIEblVfI" Bounds="498,614" Alignment="Bottom" />
                 </Node>
-                <Node Bounds="385,196,55,19" Id="NJMfZQGP7biM5ih1XjXV3i">
-                  <p:NodeReference LastCategoryFullName="IO.Net.IPAddress" LastSymbolSource="VL.CoreLib.IO.vl">
+                <Node Bounds="365,218,55,19" Id="NJMfZQGP7biM5ih1XjXV3i">
+                  <p:NodeReference LastCategoryFullName="IO.Net.IPAddress" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <CategoryReference Kind="ClassType" Name="IPAddress" />
                     <Choice Kind="OperationCallFlag" Name="TryParse" />
@@ -1047,8 +1051,8 @@
                   <Pin Id="JpG7VJQB15JNAFpHmL2isJ" Name="Success" Kind="OutputPin" />
                   <Pin Id="HF24RA61GMUL59njrf0FxT" Name="Address" Kind="OutputPin" />
                 </Node>
-                <Node Bounds="351,222,37,19" Id="SURhkrb20ifPnd4avkghXM">
-                  <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="CoreLibBasics.vl">
+                <Node Bounds="331,244,37,19" Id="SURhkrb20ifPnd4avkghXM">
+                  <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="AND" />
                     <CategoryReference Kind="BooleanType" Name="Boolean" NeedsToBeDirectParent="true" />
@@ -1057,12 +1061,93 @@
                   <Pin Id="AWmkLBRkW3UO3PD2dbUo8z" Name="Input 2" Kind="InputPin" />
                   <Pin Id="OUK3cAv6aNeNdiv24o1aRl" Name="Output" Kind="StateOutputPin" />
                 </Node>
+                <Node Bounds="508,630,134,188" Id="N7qni1hZgEpLEBkfbdWyeP">
+                  <p:NodeReference LastCategoryFullName="Reactive.Disposables.Disposable" LastDependency="VL.CoreLib.vl" OverloadStrategy="AllPinsThatAreNotCommon">
+                    <Choice Kind="RegionFlag" Name="Region (Stateless)" Fixed="true" />
+                    <CategoryReference Kind="ClassType" Name="Disposable" />
+                    <Choice Kind="OperationCallFlag" Name="Create" />
+                    <PinReference Kind="InputPin" Name="Dispose">
+                      <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="Primitive.Delegates" LastDependency="VL.CoreLib.vl">
+                        <Choice Kind="TypeFlag" Name="Delegate (0 -&gt; 0)" />
+                      </p:DataTypeReference>
+                    </PinReference>
+                  </p:NodeReference>
+                  <Pin Id="O8V5JAf1QQlLago6KnJtMG" Name="Result" Kind="OutputPin" />
+                  <Patch Id="EEmeKjC6Gb5QI47AeqHPdK" Name="Dispose" ManuallySortedPins="true">
+                    <Node Bounds="531,683,99,115" Id="G9fDIDXfd2hPzRLbOloXKr">
+                      <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
+                        <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+                        <CategoryReference Kind="Category" Name="Primitive" />
+                        <Choice Kind="ApplicationStatefulRegion" Name="If" />
+                      </p:NodeReference>
+                      <Pin Id="I65X5PslZm7McuQbtvE48p" Name="Condition" Kind="InputPin" />
+                      <Patch Id="GyP00JfaU5pPzdQAob23Uv" ManuallySortedPins="true">
+                        <Patch Id="AJsWxos0RbTMz9Z9VenpmY" Name="Create" ManuallySortedPins="true" />
+                        <Patch Id="BVk6EWjEczrN12abZouTec" Name="Then" ManuallySortedPins="true" />
+                        <Node Bounds="543,706,75,26" Id="AT9MzEN1YKbLA445TH71ti">
+                          <p:NodeReference LastCategoryFullName="SuperSimpleTcp.SimpleTcpServer" LastDependency="SuperSimpleTcp.dll">
+                            <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                            <Choice Kind="OperationCallFlag" Name="Stop" />
+                            <CategoryReference Kind="AssemblyCategory" Name="SimpleTcpServer" NeedsToBeDirectParent="true" />
+                          </p:NodeReference>
+                          <Pin Id="E4m7CdhwjskPp928aT6RK5" Name="Input" Kind="StateInputPin" />
+                          <Pin Id="NDD9sA1xRwiPOeLrdnA1JH" Name="Output" Kind="StateOutputPin" />
+                        </Node>
+                        <Node Bounds="543,752,75,26" Id="QvBZzMnbBk7N0GLX972LqC">
+                          <p:NodeReference LastCategoryFullName="SuperSimpleTcp.SimpleTcpServer" LastDependency="SuperSimpleTcp.dll">
+                            <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                            <Choice Kind="OperationCallFlag" Name="Dispose" />
+                            <CategoryReference Kind="AssemblyCategory" Name="SimpleTcpServer" NeedsToBeDirectParent="true" />
+                          </p:NodeReference>
+                          <Pin Id="DCNbQgs5yQoO0VcEmt2dsX" Name="Input" Kind="StateInputPin" />
+                          <Pin Id="D1i0ihS0NqHOkxtYoW7Uxp" Name="Output" Kind="StateOutputPin" />
+                        </Node>
+                      </Patch>
+                    </Node>
+                    <Node Bounds="531,653,65,19" Id="MrxXO21Z9KgPTu4Io680si">
+                      <p:NodeReference LastCategoryFullName="Primitive.Object" LastDependency="VL.CoreLib.vl">
+                        <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                        <Choice Kind="OperationCallFlag" Name="IsAssigned" />
+                      </p:NodeReference>
+                      <Pin Id="GbN7GKaqY9OLiWFhdJUfUz" Name="X" Kind="InputPin" />
+                      <Pin Id="AwHKi0uOBT1OQViMpS2KiQ" Name="Result" Kind="OutputPin" />
+                      <Pin Id="Rp00sNrgvrUM4yp0SrIw9E" Name="Not Assigned" Kind="OutputPin" />
+                    </Node>
+                  </Patch>
+                </Node>
+                <Node Bounds="433,833,80,26" Id="Kk54iD4LSbyLVPJZzlJ3Ew">
+                  <p:NodeReference LastCategoryFullName="Reactive.Disposables.SerialDisposable" LastDependency="VL.CoreLib.vl">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <CategoryReference Kind="ClassType" Name="SerialDisposable" />
+                    <Choice Kind="OperationCallFlag" Name="SetDisposable" />
+                  </p:NodeReference>
+                  <Pin Id="GvTyNoTQ6KCLx529nRSY6E" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="ECDrXt9KCVOQEGXPgxJCnw" Name="Value" Kind="InputPin" />
+                  <Pin Id="I5GoFrzRXvAPo8gboA0eC3" Name="Output" Kind="StateOutputPin" />
+                </Node>
+                <Node Bounds="497,235,80,26" Id="Twk8Oz4tpvRNG3JMVMNpmm">
+                  <p:NodeReference LastCategoryFullName="Reactive.Disposables.SerialDisposable" LastDependency="VL.CoreLib.vl">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <CategoryReference Kind="ClassType" Name="SerialDisposable" NeedsToBeDirectParent="true" />
+                    <Choice Kind="OperationCallFlag" Name="SetDisposable" />
+                  </p:NodeReference>
+                  <Pin Id="Ph3VVHKPTUbLRN2dlnyn0G" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="P64BgtHDwBNMY2EFKEPA3C" Name="Value" Kind="InputPin" />
+                  <Pin Id="BSk1JBW7UPqO80rUFLnrAd" Name="Output" Kind="StateOutputPin" />
+                </Node>
+                <Node Bounds="572,202,40,19" Id="JrRXAb24S2mQXMQbCF0t5e">
+                  <p:NodeReference LastCategoryFullName="Primitive.Object" LastDependency="VL.CoreLib.vl">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <Choice Kind="OperationCallFlag" Name="NULL" />
+                  </p:NodeReference>
+                  <Pin Id="DpeNS4WAjmrNqfdvIpPqAO" Name="Result" Kind="OutputPin" />
+                </Node>
               </Patch>
             </Node>
-            <ControlPoint Id="HmBBw97IXbKOsx9JkjjsH6" Bounds="372,111" />
-            <ControlPoint Id="Gmro2AjpvAeOAuLMytwKm4" Bounds="447,110" />
-            <Node Bounds="666,121,56,19" Id="D9UAD1P6mWXN0iwKFbYwRA">
-              <p:NodeReference LastCategoryFullName="Control" LastSymbolSource="CoreLibBasics.vl">
+            <ControlPoint Id="HmBBw97IXbKOsx9JkjjsH6" Bounds="352,133" />
+            <ControlPoint Id="Gmro2AjpvAeOAuLMytwKm4" Bounds="427,132" />
+            <Node Bounds="749,121,56,19" Id="D9UAD1P6mWXN0iwKFbYwRA">
+              <p:NodeReference LastCategoryFullName="Control" LastDependency="VL.CoreLib.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="ProcessAppFlag" Name="TogEdge" />
               </p:NodeReference>
@@ -1070,29 +1155,29 @@
               <Pin Id="DlE0kNmh9TBOUMiHjthf8Z" Name="Up Edge" Kind="OutputPin" />
               <Pin Id="Pw04E7ZYczQPkt563EBudb" Name="Down Edge" Kind="OutputPin" />
             </Node>
-            <ControlPoint Id="O1G9qfCQ6flLPlVfhNGDnP" Bounds="669,98" />
-            <Node Bounds="218,692,612,342" Id="BnSgnwW8NHjNajzfFJlcpv">
-              <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.dll">
+            <ControlPoint Id="O1G9qfCQ6flLPlVfhNGDnP" Bounds="752,98" />
+            <Node Bounds="217,982,612,342" Id="BnSgnwW8NHjNajzfFJlcpv">
+              <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
                 <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                 <Choice Kind="ApplicationStatefulRegion" Name="If" />
                 <FullNameCategoryReference ID="Primitive" />
               </p:NodeReference>
               <Pin Id="Qg0Bz18HhvyP1Keat21xrf" Name="Condition" Kind="InputPin" />
-              <ControlPoint Id="JTpyRJQuIGKPaIzGw4bSi8" Bounds="491,1028" Alignment="Bottom" />
-              <ControlPoint Id="TbJ3XE8LKYiPZEyZ6jZU1K" Bounds="581,703" Alignment="Top" />
-              <ControlPoint Id="T1uvcg87zIeNO5044BqCeF" Bounds="588,1028" Alignment="Bottom" />
-              <ControlPoint Id="M1MdkLMKT3bMMBSTxbawBA" Bounds="778,703" Alignment="Top" />
-              <ControlPoint Id="OxrmHz7IcEVLHvozl6akDD" Bounds="274,1028" Alignment="Bottom" />
-              <ControlPoint Id="TRHzQn0oYmMMTOopCoY63H" Bounds="274,703" Alignment="Top" />
-              <ControlPoint Id="NnwLAicOrIfNocgEMWdbrH" Bounds="379,703" Alignment="Top" />
-              <ControlPoint Id="FMMtwPT86nBM8JlD4J02q4" Bounds="379,1028" Alignment="Bottom" />
-              <ControlPoint Id="SMnKQRyj178MRBZkfXEcLe" Bounds="718,1028" Alignment="Bottom" />
-              <ControlPoint Id="RYTo2IiuWf9MZpfdlaRERb" Bounds="718,698" Alignment="Top" />
+              <ControlPoint Id="JTpyRJQuIGKPaIzGw4bSi8" Bounds="490,1318" Alignment="Bottom" />
+              <ControlPoint Id="TbJ3XE8LKYiPZEyZ6jZU1K" Bounds="580,988" Alignment="Top" />
+              <ControlPoint Id="T1uvcg87zIeNO5044BqCeF" Bounds="587,1318" Alignment="Bottom" />
+              <ControlPoint Id="M1MdkLMKT3bMMBSTxbawBA" Bounds="777,988" Alignment="Top" />
+              <ControlPoint Id="OxrmHz7IcEVLHvozl6akDD" Bounds="273,1318" Alignment="Bottom" />
+              <ControlPoint Id="TRHzQn0oYmMMTOopCoY63H" Bounds="273,988" Alignment="Top" />
+              <ControlPoint Id="NnwLAicOrIfNocgEMWdbrH" Bounds="378,988" Alignment="Top" />
+              <ControlPoint Id="FMMtwPT86nBM8JlD4J02q4" Bounds="378,1318" Alignment="Bottom" />
+              <ControlPoint Id="SMnKQRyj178MRBZkfXEcLe" Bounds="717,1318" Alignment="Bottom" />
+              <ControlPoint Id="RYTo2IiuWf9MZpfdlaRERb" Bounds="717,988" Alignment="Top" />
               <Patch Id="O3sQ5biQTarMlTElnvr9lF" ManuallySortedPins="true">
                 <Patch Id="GzPCNHEWRhPPM0EM5cysQO" Name="Create" ManuallySortedPins="true" />
                 <Patch Id="V6Yo94pxD9zNc2spUNgNCl" Name="Then" ManuallySortedPins="true" />
-                <Node Bounds="743,952,75,26" Id="S4lKFVqBajpOGXDe4AeAl0">
-                  <p:NodeReference LastCategoryFullName="SuperSimpleTcp.SimpleTcpServer" LastSymbolSource="SuperSimpleTcp.dll">
+                <Node Bounds="742,1242,75,26" Id="S4lKFVqBajpOGXDe4AeAl0">
+                  <p:NodeReference LastCategoryFullName="SuperSimpleTcp.SimpleTcpServer" LastDependency="SuperSimpleTcp.dll">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="Dispose" />
                     <CategoryReference Kind="AssemblyCategory" Name="SimpleTcpServer" NeedsToBeDirectParent="true" />
@@ -1101,8 +1186,8 @@
                   <Pin Id="Vs8IwFazJ0cNlviimqBIBx" Name="Output" Kind="StateOutputPin" />
                   <Pin Id="GZpES6xnFx6OjQ7ySQ2VRM" Name="Apply" Kind="InputPin" />
                 </Node>
-                <Node Bounds="451,764,75,26" Id="VFrmzrEsD94LmEb0syrmMf">
-                  <p:NodeReference LastCategoryFullName="SuperSimpleTcp.SimpleTcpServer" LastSymbolSource="SuperSimpleTcp.dll">
+                <Node Bounds="450,1054,75,26" Id="VFrmzrEsD94LmEb0syrmMf">
+                  <p:NodeReference LastCategoryFullName="SuperSimpleTcp.SimpleTcpServer" LastDependency="SuperSimpleTcp.dll">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="GetClients" />
                   </p:NodeReference>
@@ -1110,8 +1195,8 @@
                   <Pin Id="G4V2ZTGovGRP6pmxqK0Ro0" Name="Output" Kind="StateOutputPin" />
                   <Pin Id="QqAvUlcmGoOPtaitryMyPF" Name="Result" Kind="OutputPin" />
                 </Node>
-                <Node Bounds="541,820,51,26" Id="CU9H8ySZRejP5BK8opcbgy">
-                  <p:NodeReference LastCategoryFullName="SuperSimpleTcp.SimpleTcpServer" LastSymbolSource="SuperSimpleTcp.dll">
+                <Node Bounds="540,1110,75,26" Id="CU9H8ySZRejP5BK8opcbgy">
+                  <p:NodeReference LastCategoryFullName="SuperSimpleTcp.SimpleTcpServer" LastDependency="SuperSimpleTcp.dll">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="Statistics" />
                     <CategoryReference Kind="AssemblyCategory" Name="SimpleTcpServer" NeedsToBeDirectParent="true" />
@@ -1120,8 +1205,8 @@
                   <Pin Id="Nwv2XERTGnMMMAyimeDLvw" Name="Output" Kind="StateOutputPin" />
                   <Pin Id="ViTy4Sc1XEUPvt8wNSOqhn" Name="Statistics" Kind="OutputPin" />
                 </Node>
-                <Node Bounds="268,780,98,26" Id="EsedGeTxxrvPiFljnCVjhg">
-                  <p:NodeReference LastCategoryFullName="SuperSimpleTcp.SimpleTcpServerEvents" LastSymbolSource="SuperSimpleTcp.dll">
+                <Node Bounds="267,1070,98,26" Id="EsedGeTxxrvPiFljnCVjhg">
+                  <p:NodeReference LastCategoryFullName="SuperSimpleTcp.SimpleTcpServerEvents" LastDependency="SuperSimpleTcp.dll">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="DataReceived" />
                     <CategoryReference Kind="AssemblyCategory" Name="SimpleTcpServerEvents" NeedsToBeDirectParent="true" />
@@ -1129,8 +1214,8 @@
                   <Pin Id="Dze0pn8Wc3aQaBkMcXQmMz" Name="Input" Kind="StateInputPin" />
                   <Pin Id="Ss5yIAlrWMMMuRHry91ECb" Name="Result" Kind="OutputPin" />
                 </Node>
-                <Node Bounds="270,827,86,94" Id="Klj96McWzQSPBXjkt0OslG">
-                  <p:NodeReference LastCategoryFullName="Reactive" LastSymbolSource="VL.Reactive.vl">
+                <Node Bounds="269,1117,86,94" Id="Klj96McWzQSPBXjkt0OslG">
+                  <p:NodeReference LastCategoryFullName="Reactive" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="ProcessAppFlag" Name="ForEach" />
                     <CategoryReference Kind="Category" Name="Reactive" NeedsToBeDirectParent="true" />
                     <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
@@ -1144,10 +1229,10 @@
                       <Pin Id="LNNhcwwt5iUOnSUR5pXy0o" Name="Input 1" Kind="InputPin" />
                       <Pin Id="TQAkbXomAImNjZO39njiAJ" Name="Output" Kind="OutputPin" />
                     </Patch>
-                    <ControlPoint Id="PZX5xZYuQmlPpdoyQUiBVj" Bounds="284,835" />
-                    <ControlPoint Id="NHlI5eylf7ENUN3Cthj5s8" Bounds="285,914" />
-                    <Node Bounds="282,858,62,26" Id="GxreroEqMOLLeECKRCXumg">
-                      <p:NodeReference LastCategoryFullName="Reactive.EventPattern" LastSymbolSource="VL.Reactive.vl">
+                    <ControlPoint Id="PZX5xZYuQmlPpdoyQUiBVj" Bounds="283,1125" />
+                    <ControlPoint Id="NHlI5eylf7ENUN3Cthj5s8" Bounds="284,1204" />
+                    <Node Bounds="281,1148,62,26" Id="GxreroEqMOLLeECKRCXumg">
+                      <p:NodeReference LastCategoryFullName="Reactive.EventPattern" LastDependency="VL.CoreLib.vl">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <CategoryReference Kind="RecordType" Name="EventPattern" />
                         <Choice Kind="OperationCallFlag" Name="EventArgs" />
@@ -1157,16 +1242,16 @@
                     </Node>
                   </Patch>
                 </Node>
-                <Node Bounds="586,909,55,19" Id="VuU8VGSNZHANdOcXtAQc4u">
-                  <p:NodeReference LastCategoryFullName="System.Conversion" LastSymbolSource="CoreLibBasics.vl">
+                <Node Bounds="585,1199,55,19" Id="VuU8VGSNZHANdOcXtAQc4u">
+                  <p:NodeReference LastCategoryFullName="System.Conversion" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="ToString" />
                   </p:NodeReference>
                   <Pin Id="HaoGxSciukvP7soRmqgywY" Name="Input" Kind="InputPin" />
                   <Pin Id="KxBMgQQjWlUMk8fpHB7FYC" Name="Result" Kind="OutputPin" />
                 </Node>
-                <Node Bounds="378,715,75,26" Id="UlWGLMMFaIeQbesfKdMG5c">
-                  <p:NodeReference LastCategoryFullName="SuperSimpleTcp.SimpleTcpServer" LastSymbolSource="SuperSimpleTcp.dll">
+                <Node Bounds="377,1005,75,26" Id="UlWGLMMFaIeQbesfKdMG5c">
+                  <p:NodeReference LastCategoryFullName="SuperSimpleTcp.SimpleTcpServer" LastDependency="SuperSimpleTcp.dll">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="Events" />
                     <CategoryReference Kind="AssemblyCategory" Name="SimpleTcpServer" NeedsToBeDirectParent="true" />
@@ -1175,8 +1260,8 @@
                   <Pin Id="VS2KHXr55r2QCKjHoxMEVh" Name="Output" Kind="StateOutputPin" />
                   <Pin Id="Rl8GZMUQqIqLiFvJOyPIqJ" Name="Events" Kind="OutputPin" />
                 </Node>
-                <Node Bounds="647,863,75,26" Id="UATHRbMEHyVQdJuy7UawO2">
-                  <p:NodeReference LastCategoryFullName="SuperSimpleTcp.SimpleTcpServer" LastSymbolSource="SuperSimpleTcp.dll">
+                <Node Bounds="646,1153,75,26" Id="UATHRbMEHyVQdJuy7UawO2">
+                  <p:NodeReference LastCategoryFullName="SuperSimpleTcp.SimpleTcpServer" LastDependency="SuperSimpleTcp.dll">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="IsListening" />
                   </p:NodeReference>
@@ -1184,8 +1269,8 @@
                   <Pin Id="CWDUcv7xoBdLbxCvUqeCoX" Name="Output" Kind="StateOutputPin" />
                   <Pin Id="ENonUNQA8eyQWIgiBgbLhI" Name="Is Listening" Kind="OutputPin" />
                 </Node>
-                <Node Bounds="743,910,75,26" Id="Mzr35xSROHmMKwbcgGcKBW">
-                  <p:NodeReference LastCategoryFullName="SuperSimpleTcp.SimpleTcpServer" LastSymbolSource="SuperSimpleTcp.dll">
+                <Node Bounds="742,1200,75,26" Id="Mzr35xSROHmMKwbcgGcKBW">
+                  <p:NodeReference LastCategoryFullName="SuperSimpleTcp.SimpleTcpServer" LastDependency="SuperSimpleTcp.dll">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="Stop" />
                     <CategoryReference Kind="AssemblyCategory" Name="SimpleTcpServer" NeedsToBeDirectParent="true" />
@@ -1196,8 +1281,8 @@
                 </Node>
               </Patch>
             </Node>
-            <Node Bounds="218,653,65,19" Id="PpHshKYPVD0Mzb639WBd54">
-              <p:NodeReference LastCategoryFullName="Primitive.Object" LastSymbolSource="CoreLibBasics.vl">
+            <Node Bounds="217,943,65,19" Id="PpHshKYPVD0Mzb639WBd54">
+              <p:NodeReference LastCategoryFullName="Primitive.Object" LastDependency="VL.CoreLib.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="OperationCallFlag" Name="IsAssigned" />
               </p:NodeReference>
@@ -1205,30 +1290,30 @@
               <Pin Id="Mb00rQCRsiLMEpYdMySylG" Name="Result" Kind="OutputPin" />
               <Pin Id="DsT8WJPUnQbPV9Z2wul14P" Name="Not Assigned" Kind="OutputPin" />
             </Node>
-            <ControlPoint Id="A09nA20QXepOeDew7VCLEH" Bounds="493,1064" />
-            <ControlPoint Id="RpxqJapEZnHPymjoVQIIle" Bounds="590,1064" />
-            <ControlPoint Id="CyGToKi7LGkOVN5U6eoqWu" Bounds="276,1064" />
-            <Node Bounds="943,574,145,152" Id="IjI9tx0qDfiPvSOP8yC14t">
-              <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.dll">
+            <ControlPoint Id="A09nA20QXepOeDew7VCLEH" Bounds="492,1354" />
+            <ControlPoint Id="RpxqJapEZnHPymjoVQIIle" Bounds="589,1354" />
+            <ControlPoint Id="CyGToKi7LGkOVN5U6eoqWu" Bounds="275,1354" />
+            <Node Bounds="1106,944,145,152" Id="IjI9tx0qDfiPvSOP8yC14t">
+              <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
                 <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                 <Choice Kind="ApplicationStatefulRegion" Name="If" />
                 <FullNameCategoryReference ID="Primitive" />
               </p:NodeReference>
               <Pin Id="VI668WTAuZQOfysPcoBQK8" Name="Condition" Kind="InputPin" />
-              <ControlPoint Id="SnTQW12YVnHOGqkuqXbKy6" Bounds="957,582" Alignment="Top" />
-              <ControlPoint Id="VQCa0olgoiUNicDRFNurel" Bounds="957,720" Alignment="Bottom" />
+              <ControlPoint Id="SnTQW12YVnHOGqkuqXbKy6" Bounds="1120,950" Alignment="Top" />
+              <ControlPoint Id="VQCa0olgoiUNicDRFNurel" Bounds="1120,1090" Alignment="Bottom" />
               <Patch Id="JnE74qqvk69OTGyAALxsD1" ManuallySortedPins="true">
                 <Patch Id="EY66uAiptZoMNBr9dsrHza" Name="Create" ManuallySortedPins="true" />
                 <Patch Id="N1Inr77OFQ4QUgEJSBCF6j" Name="Then" ManuallySortedPins="true" />
-                <Node Bounds="955,670,75,26" Id="GzuZr1hHNruLHs5hXD0MsD">
-                  <p:NodeReference LastCategoryFullName="SuperSimpleTcp.SimpleTcpServer" LastSymbolSource="SuperSimpleTcp.dll">
+                <Node Bounds="1118,1040,75,26" Id="GzuZr1hHNruLHs5hXD0MsD">
+                  <p:NodeReference LastCategoryFullName="SuperSimpleTcp.SimpleTcpServer" LastDependency="SuperSimpleTcp.dll">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="Send" />
                     <PinReference Kind="InputPin" Name="Data">
-                      <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="System" LastSymbolSource="mscorlib.dll">
+                      <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="System" LastDependency="mscorlib.dll">
                         <Choice Kind="TypeFlag" Name="Array`1" />
                         <p:TypeArguments>
-                          <TypeReference LastCategoryFullName="System" LastSymbolSource="mscorlib.dll">
+                          <TypeReference LastCategoryFullName="System" LastDependency="mscorlib.dll">
                             <Choice Kind="TypeFlag" Name="Byte" />
                           </TypeReference>
                         </p:TypeArguments>
@@ -1241,8 +1326,8 @@
                   <Pin Id="MNTjAnevTYjMhNvjTMJzDP" Name="Data" Kind="InputPin" />
                   <Pin Id="FriJbvgWto3O30cXMKs7Ig" Name="Output" Kind="StateOutputPin" />
                 </Node>
-                <Node Bounds="1024,627,52,19" Id="Fcxd9DAG46tO4oElO0mnWB">
-                  <p:NodeReference LastCategoryFullName="Primitive.String" LastSymbolSource="CoreLibBasics.vl">
+                <Node Bounds="1187,997,52,19" Id="Fcxd9DAG46tO4oElO0mnWB">
+                  <p:NodeReference LastCategoryFullName="Primitive.String" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="ToBytes" />
                     <CategoryReference Kind="StringType" Name="String" NeedsToBeDirectParent="true" />
@@ -1251,8 +1336,8 @@
                   <Pin Id="ABjkr1PCW5pO72fyupryxU" Name="Encoding" Kind="InputPin" />
                   <Pin Id="TnDgTWoyAJwLWS5kij1JIR" Name="Result" Kind="OutputPin" />
                 </Node>
-                <Node Bounds="1024,597,25,19" Id="QyuUeebcRF3NQcAVyuzmDy">
-                  <p:NodeReference LastCategoryFullName="Math" LastSymbolSource="CoreLibBasics.vl">
+                <Node Bounds="1187,967,25,19" Id="QyuUeebcRF3NQcAVyuzmDy">
+                  <p:NodeReference LastCategoryFullName="Math" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="+" />
                   </p:NodeReference>
@@ -1262,10 +1347,10 @@
                 </Node>
               </Patch>
             </Node>
-            <ControlPoint Id="DzXQfH1JdkyLEZaabymGg8" Bounds="1001,415" />
-            <ControlPoint Id="TTntLyriEfRPksX7l0yKkM" Bounds="1055,440" />
-            <Node Bounds="942,465,81,19" Id="FKDIDHGwPyuO1mLhcnSW9v">
-              <p:NodeReference LastCategoryFullName="IO.TCP" LastSymbolSource="VL.IO.TCP.vl">
+            <ControlPoint Id="DzXQfH1JdkyLEZaabymGg8" Bounds="1164,785" />
+            <ControlPoint Id="TTntLyriEfRPksX7l0yKkM" Bounds="1218,810" />
+            <Node Bounds="1105,835,81,19" Id="FKDIDHGwPyuO1mLhcnSW9v">
+              <p:NodeReference LastCategoryFullName="IO.TCP" LastDependency="VL.IO.TCP.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="OperationCallFlag" Name="ValidateInputs" />
               </p:NodeReference>
@@ -1274,22 +1359,26 @@
               <Pin Id="Mg8mzxT6AqhMgVI9Qc2R41" Name="Data" Kind="InputPin" />
               <Pin Id="FEb8U8KHMyWMoP7Oq445W6" Name="Output" Kind="OutputPin" />
             </Node>
-            <Node Bounds="925,904,338,562" Id="UBl1nzMtlWlOCFCIA99rkS">
-              <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.dll">
+            <Node Bounds="1088,1274,338,562" Id="UBl1nzMtlWlOCFCIA99rkS">
+              <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
                 <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                 <Choice Kind="ApplicationStatefulRegion" Name="If" />
                 <FullNameCategoryReference ID="Primitive" />
               </p:NodeReference>
               <Pin Id="Gb1GTr6EuC4L11SocMM2kp" Name="Condition" Kind="InputPin" />
-              <ControlPoint Id="Q8CbNvW2hmEOZ5C4UreAiv" Bounds="964,910" Alignment="Top" />
-              <ControlPoint Id="UbPVJBKmPtOOuhYUJ6NeGJ" Bounds="957,1460" Alignment="Bottom" />
-              <ControlPoint Id="VjGGaEJE1YxPGpYQ3n47Y9" Bounds="1153,910" Alignment="Top" />
-              <ControlPoint Id="RvCT6gD8cfDPusEvUL0BuU" Bounds="1107,1460" Alignment="Bottom" />
+              <ControlPoint Id="Q8CbNvW2hmEOZ5C4UreAiv" Bounds="1127,1280" Alignment="Top" />
+              <ControlPoint Id="UbPVJBKmPtOOuhYUJ6NeGJ" Bounds="1120,1830" Alignment="Bottom" />
+              <ControlPoint Id="VjGGaEJE1YxPGpYQ3n47Y9" Bounds="1316,1280" Alignment="Top" />
+              <ControlPoint Id="RvCT6gD8cfDPusEvUL0BuU" Bounds="1270,1830" Alignment="Bottom" />
+              <ControlPoint Id="RkzQs3Nh1S1MfjjDDTP9Mk" Bounds="1403,1280" Alignment="Top" />
+              <ControlPoint Id="HiFJXPYwUr1PeCoMODFP0s" Bounds="1403,1830" Alignment="Bottom" />
+              <ControlPoint Id="JyQaXfgpvxRPR2S9EdEQqG" Bounds="1149,1280" Alignment="Top" />
+              <ControlPoint Id="RBMP6bHRcaKPYWAhGYO5bV" Bounds="1175,1830" Alignment="Bottom" />
               <Patch Id="DZskNhTh7pfODANlyBA7Ms" ManuallySortedPins="true">
                 <Patch Id="KJYdw4GKW3NOxQuSF3Xiqq" Name="Create" ManuallySortedPins="true" />
                 <Patch Id="PyzHjB7EduFPIyThDBayx1" Name="Then" ManuallySortedPins="true" />
-                <Node Bounds="1023,956,48,19" Id="IqayntsXM5iPEggddgCImc">
-                  <p:NodeReference LastCategoryFullName="Primitive.Object" LastSymbolSource="CoreLibBasics.vl">
+                <Node Bounds="1186,1326,48,19" Id="IqayntsXM5iPEggddgCImc">
+                  <p:NodeReference LastCategoryFullName="Primitive.Object" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="CastAs" />
                   </p:NodeReference>
@@ -1298,8 +1387,8 @@
                   <Pin Id="MQFG876QJq1OWOooXaPSfl" Name="Result" Kind="OutputPin" />
                   <Pin Id="QdxDgUIFZzvMIKOgJ4iJud" Name="Success" Kind="OutputPin" />
                 </Node>
-                <Node Bounds="997,1011,99,80" Id="U32floBSW8uNZA08LU3oVl">
-                  <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.dll">
+                <Node Bounds="1160,1381,99,80" Id="U32floBSW8uNZA08LU3oVl">
+                  <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
                     <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                     <Choice Kind="ApplicationStatefulRegion" Name="If" />
                     <CategoryReference Kind="Category" Name="Primitive" />
@@ -1308,16 +1397,16 @@
                   <Patch Id="H274c6U6taULxNE4J8Twmy" ManuallySortedPins="true">
                     <Patch Id="C2XOOwBuuWiQNCzdD1wzG2" Name="Create" ManuallySortedPins="true" />
                     <Patch Id="IDxFXdbjQYGMlk4nOWEC5V" Name="Then" ManuallySortedPins="true" />
-                    <Node Bounds="1009,1040,75,26" Id="Q6DcC7jCX8rPgSFIA81867">
-                      <p:NodeReference LastCategoryFullName="SuperSimpleTcp.SimpleTcpServer" LastSymbolSource="SuperSimpleTcp.dll" OverloadStrategy="AllPinsThatAreNotCommon">
+                    <Node Bounds="1172,1410,75,26" Id="Q6DcC7jCX8rPgSFIA81867">
+                      <p:NodeReference LastCategoryFullName="SuperSimpleTcp.SimpleTcpServer" LastDependency="SuperSimpleTcp.dll" OverloadStrategy="AllPinsThatAreNotCommon">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <Choice Kind="OperationCallFlag" Name="Send" />
                         <CategoryReference Kind="AssemblyCategory" Name="SimpleTcpServer" NeedsToBeDirectParent="true" />
                         <PinReference Kind="InputPin" Name="Data">
-                          <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="System" LastSymbolSource="mscorlib.dll">
+                          <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="System" LastDependency="mscorlib.dll">
                             <Choice Kind="TypeFlag" Name="Array`1" />
                             <p:TypeArguments>
-                              <TypeReference LastCategoryFullName="System" LastSymbolSource="mscorlib.dll">
+                              <TypeReference LastCategoryFullName="System" LastDependency="mscorlib.dll">
                                 <Choice Kind="TypeFlag" Name="Byte" />
                               </TypeReference>
                             </p:TypeArguments>
@@ -1331,8 +1420,8 @@
                     </Node>
                   </Patch>
                 </Node>
-                <Node Bounds="948,1145,303,289" Id="UBCiaFMc5XQNdm0Gx8UZwq">
-                  <p:NodeReference>
+                <Node Bounds="1111,1515,303,289" Id="UBCiaFMc5XQNdm0Gx8UZwq">
+                  <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
                     <Choice Kind="ApplicationStatefulRegion" Name="If" />
                     <FullNameCategoryReference ID="Primitive" />
                   </p:NodeReference>
@@ -1340,8 +1429,8 @@
                   <Patch Id="DGyoaJeZlh5Pw5Cx0gXs5d" ManuallySortedPins="true">
                     <Patch Id="M9kA8yF3LTiP3nl30kxioS" Name="Create" ManuallySortedPins="true" />
                     <Patch Id="FpvsJBmqdr3MB5uWsLKLPy" Name="Then" ManuallySortedPins="true" />
-                    <Node Bounds="1001,1321,97,26" Id="AqebLkiTLHjNCg0kNsy7rb">
-                      <p:NodeReference LastCategoryFullName="System.Collections.Generic.IReadOnlyCollection`1" LastSymbolSource="System.Runtime.dll">
+                    <Node Bounds="1164,1691,97,26" Id="AqebLkiTLHjNCg0kNsy7rb">
+                      <p:NodeReference LastCategoryFullName="System.Collections.Generic.IReadOnlyCollection`1" LastDependency="System.Runtime.dll">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <Choice Kind="OperationCallFlag" Name="Count" />
                         <CategoryReference Kind="AssemblyCategory" Name="IReadOnlyCollection`1" NeedsToBeDirectParent="true" />
@@ -1350,20 +1439,20 @@
                       <Pin Id="QtilXflElddOIb6PkdNcZY" Name="Output" Kind="StateOutputPin" />
                       <Pin Id="N7fzr9OvDAuQVBY9kBdmZT" Name="Count" Kind="OutputPin" />
                     </Node>
-                    <Node Bounds="1143,1221,96,86" Id="PCVCn9MgDNuQAwHNGsxHTj">
-                      <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.dll">
+                    <Node Bounds="1306,1591,96,86" Id="PCVCn9MgDNuQAwHNGsxHTj">
+                      <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
                         <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                         <Choice Kind="ApplicationStatefulRegion" Name="ForEach" />
                         <CategoryReference Kind="Category" Name="Primitive" />
                       </p:NodeReference>
                       <Pin Id="OMDMfNLYEdoO2fdTGlzPam" Name="Break" Kind="OutputPin" />
-                      <ControlPoint Id="IEiCwvcFOeNLtm47rUZqYg" Bounds="1222,1227" Alignment="Top" />
+                      <ControlPoint Id="IEiCwvcFOeNLtm47rUZqYg" Bounds="1385,1597" Alignment="Top" />
                       <Patch Id="Uay84O2fOF2PNkQcxU2jft" ManuallySortedPins="true">
                         <Patch Id="EqgX2UYYrq2LXstzkZ6poD" Name="Create" ManuallySortedPins="true" />
                         <Patch Id="Ka3AuKtVB09NH6i22L4Dig" Name="Update" ManuallySortedPins="true" />
                         <Patch Id="REaKQCMOCZmLcq5YS27qTu" Name="Dispose" ManuallySortedPins="true" />
-                        <Node Bounds="1155,1247,70,26" Id="RtMcxwtzZamOMiZNpj6h4J">
-                          <p:NodeReference LastCategoryFullName="System.IO.MemoryStream" LastSymbolSource="mscorlib.dll">
+                        <Node Bounds="1318,1617,70,26" Id="RtMcxwtzZamOMiZNpj6h4J">
+                          <p:NodeReference LastCategoryFullName="System.IO.MemoryStream" LastDependency="mscorlib.dll">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <CategoryReference Kind="AssemblyCategory" Name="MemoryStream" />
                             <Choice Kind="OperationCallFlag" Name="WriteByte" />
@@ -1373,11 +1462,11 @@
                           <Pin Id="U2eUENf2uH7NeTw58T0wi0" Name="Output" Kind="StateOutputPin" />
                         </Node>
                       </Patch>
-                      <ControlPoint Id="IPhazhT8oTlLLdB9wDeMWq" Bounds="1157,1227" Alignment="Top" />
-                      <ControlPoint Id="B3wIA82gicRQL3wJemZ6Qu" Bounds="1157,1301" Alignment="Bottom" />
+                      <ControlPoint Id="IPhazhT8oTlLLdB9wDeMWq" Bounds="1320,1597" Alignment="Top" />
+                      <ControlPoint Id="B3wIA82gicRQL3wJemZ6Qu" Bounds="1320,1671" Alignment="Bottom" />
                     </Node>
-                    <Node Bounds="1155,1168,70,26" Id="Up8YhS6z8JeN1ZLA1oklk1">
-                      <p:NodeReference LastCategoryFullName="System.IO.MemoryStream" LastSymbolSource="mscorlib.dll">
+                    <Node Bounds="1318,1538,70,26" Id="Up8YhS6z8JeN1ZLA1oklk1">
+                      <p:NodeReference LastCategoryFullName="System.IO.MemoryStream" LastDependency="mscorlib.dll">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <CategoryReference Kind="AssemblyCategory" Name="MemoryStream" NeedsToBeDirectParent="true" />
                         <Choice Kind="OperationCallFlag" Name="SetLength" />
@@ -1386,8 +1475,8 @@
                       <Pin Id="Qvjr4qV0rLDQJCQ6LfYKRY" Name="Value" Kind="InputPin" />
                       <Pin Id="Ij7Tix5SpHZOEeem96k8HY" Name="Output" Kind="StateOutputPin" />
                     </Node>
-                    <Node Bounds="1155,1327,70,26" Id="VdSyubsSdvnLPNUt7TLok8">
-                      <p:NodeReference LastCategoryFullName="System.IO.MemoryStream" LastSymbolSource="mscorlib.dll">
+                    <Node Bounds="1318,1697,70,26" Id="VdSyubsSdvnLPNUt7TLok8">
+                      <p:NodeReference LastCategoryFullName="System.IO.MemoryStream" LastDependency="mscorlib.dll">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <Choice Kind="OperationCallFlag" Name="SetPosition" />
                         <CategoryReference Kind="AssemblyCategory" Name="MemoryStream" NeedsToBeDirectParent="true" />
@@ -1396,8 +1485,8 @@
                       <Pin Id="IG5jpCLSDv0OnklVu0YVdz" Name="Value" Kind="InputPin" />
                       <Pin Id="Rwg8YbDoLa6MuyAmmhllbJ" Name="Output" Kind="StateOutputPin" />
                     </Node>
-                    <Node Bounds="960,1388,85,26" Id="EgXgc613FgUPEf6L9llYoW">
-                      <p:NodeReference LastCategoryFullName="SuperSimpleTcp.SimpleTcpServer" LastSymbolSource="SuperSimpleTcp.dll" OverloadStrategy="AllPinsThatAreNotCommon">
+                    <Node Bounds="1123,1758,85,26" Id="EgXgc613FgUPEf6L9llYoW">
+                      <p:NodeReference LastCategoryFullName="SuperSimpleTcp.SimpleTcpServer" LastDependency="SuperSimpleTcp.dll" OverloadStrategy="AllPinsThatAreNotCommon">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <Choice Kind="OperationCallFlag" Name="Send" />
                         <CategoryReference Kind="AssemblyCategory" Name="SimpleTcpServer" NeedsToBeDirectParent="true" />
@@ -1412,8 +1501,8 @@
                     </Node>
                   </Patch>
                 </Node>
-                <Node Bounds="949,1108,37,19" Id="BWFjeZ2vTZiN9mvJ3iI5v9">
-                  <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="CoreLibBasics.vl">
+                <Node Bounds="1112,1478,37,19" Id="BWFjeZ2vTZiN9mvJ3iI5v9">
+                  <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="NOT" />
                     <CategoryReference Kind="BooleanType" Name="Boolean" NeedsToBeDirectParent="true" />
@@ -1422,15 +1511,11 @@
                   <Pin Id="Jy8aI2AMikmPqhSlhApEkh" Name="Output" Kind="StateOutputPin" />
                 </Node>
               </Patch>
-              <ControlPoint Id="RkzQs3Nh1S1MfjjDDTP9Mk" Bounds="1240,910" Alignment="Top" />
-              <ControlPoint Id="HiFJXPYwUr1PeCoMODFP0s" Bounds="1240,1460" Alignment="Bottom" />
-              <ControlPoint Id="JyQaXfgpvxRPR2S9EdEQqG" Bounds="986,910" Alignment="Top" />
-              <ControlPoint Id="RBMP6bHRcaKPYWAhGYO5bV" Bounds="1012,1460" Alignment="Bottom" />
             </Node>
-            <ControlPoint Id="G5lp8PluOKhMHwkCIBR4Ee" Bounds="1008,742" />
-            <ControlPoint Id="OOeJwhMu6LBNdV92IPHV0V" Bounds="1240,780" />
-            <Node Bounds="950,795,81,19" Id="OzESmrb6sr0Ps2ISULZuPw">
-              <p:NodeReference>
+            <ControlPoint Id="G5lp8PluOKhMHwkCIBR4Ee" Bounds="1171,1112" />
+            <ControlPoint Id="OOeJwhMu6LBNdV92IPHV0V" Bounds="1403,1150" />
+            <Node Bounds="1113,1165,81,19" Id="OzESmrb6sr0Ps2ISULZuPw">
+              <p:NodeReference LastCategoryFullName="IO.TCP" LastDependency="VL.IO.TCP.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="OperationCallFlag" Name="ValidateInputs (Data)" />
               </p:NodeReference>
@@ -1439,11 +1524,11 @@
               <Pin Id="GJ5I6sjnOpnQB3lu6oxpHY" Name="Data" Kind="InputPin" />
               <Pin Id="I3OfL1kaIt4Mdf9qCSxNWb" Name="Output" Kind="OutputPin" />
             </Node>
-            <ControlPoint Id="IRexF6PItefMcHO7R1ZiEx" Bounds="722,1064" />
-            <ControlPoint Id="PIEkC4LXxY5ML4n8WP6GOW" Bounds="1180,444" />
-            <ControlPoint Id="FSF8dRYJH5LNZ3iqSPsw0Z" Bounds="1098,439" />
-            <Node Bounds="943,538,37,19" Id="QU2Fu8KdRT3MVSme1YFGH6">
-              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="CoreLibBasics.vl">
+            <ControlPoint Id="IRexF6PItefMcHO7R1ZiEx" Bounds="721,1354" />
+            <ControlPoint Id="PIEkC4LXxY5ML4n8WP6GOW" Bounds="1343,814" />
+            <ControlPoint Id="FSF8dRYJH5LNZ3iqSPsw0Z" Bounds="1261,809" />
+            <Node Bounds="1106,908,37,19" Id="QU2Fu8KdRT3MVSme1YFGH6">
+              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastDependency="VL.CoreLib.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="OperationCallFlag" Name="AND" />
                 <CategoryReference Kind="BooleanType" Name="Boolean" NeedsToBeDirectParent="true" />
@@ -1452,9 +1537,9 @@
               <Pin Id="CDswaO4vMBQLH5X0JHBbeL" Name="Input 2" Kind="InputPin" />
               <Pin Id="MEKyfuzXIsELIqBKca30n5" Name="Output" Kind="StateOutputPin" />
             </Node>
-            <ControlPoint Id="V5wRnmATOApMqKKw1iiFUt" Bounds="1193,510" />
-            <Node Bounds="950,837,37,19" Id="IbnxTkq3m1wO5gCm1GWPqQ">
-              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="CoreLibBasics.vl">
+            <ControlPoint Id="V5wRnmATOApMqKKw1iiFUt" Bounds="1356,880" />
+            <Node Bounds="1113,1207,37,19" Id="IbnxTkq3m1wO5gCm1GWPqQ">
+              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastDependency="VL.CoreLib.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="OperationCallFlag" Name="AND" />
                 <CategoryReference Kind="BooleanType" Name="Boolean" NeedsToBeDirectParent="true" />
@@ -1463,16 +1548,34 @@
               <Pin Id="LCDapNHQnAYLLR0Gw4Kagb" Name="Input 2" Kind="InputPin" />
               <Pin Id="QwDNO7oNKWaLSV0fBXZh8c" Name="Output" Kind="StateOutputPin" />
             </Node>
-            <ControlPoint Id="PwTdbFvOQcnNINrLHk1icK" Bounds="1076,811" />
-            <Node Bounds="1151,835,70,26" Id="AwcggvnSWpHNN2ZIdlUS4E">
-              <p:NodeReference LastCategoryFullName="System.IO.MemoryStream" LastSymbolSource="mscorlib.dll">
+            <ControlPoint Id="PwTdbFvOQcnNINrLHk1icK" Bounds="1239,1181" />
+            <Node Bounds="1314,1205,70,26" Id="AwcggvnSWpHNN2ZIdlUS4E">
+              <p:NodeReference LastCategoryFullName="System.IO.MemoryStream" LastDependency="mscorlib.dll">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <CategoryReference Kind="AssemblyCategory" Name="MemoryStream" />
                 <Choice Kind="OperationCallFlag" Name="Create" />
               </p:NodeReference>
               <Pin Id="Lgh2KQ5y9gNPyceVGe2Jzi" Name="Output" Kind="StateOutputPin" />
             </Node>
-            <Pad Id="MvfswzrrxrcQO4LwYFems3" Bounds="1153,884" />
+            <Pad Id="MvfswzrrxrcQO4LwYFems3" Bounds="1316,1254" />
+            <Node Bounds="168,123,75,26" Id="KLodrYy2eEpN6SMe9T1v5Z">
+              <p:NodeReference LastCategoryFullName="Reactive.Disposables.SerialDisposable" LastDependency="VL.CoreLib.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <CategoryReference Kind="ClassType" Name="SerialDisposable" />
+                <Choice Kind="OperationCallFlag" Name="Create" />
+              </p:NodeReference>
+              <Pin Id="A9FAVmr18wpMofk3Fz7UC4" Name="Output" Kind="StateOutputPin" />
+            </Node>
+            <Pad Id="Cu7GcRpkaroNZGBc3G9POd" Bounds="171,171" />
+            <Node Bounds="76,278,58,26" Id="VpUyMZOUwaYPWQPqep4wHa">
+              <p:NodeReference LastCategoryFullName="Primitive.IDisposable" LastDependency="VL.CoreLib.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <CategoryReference Kind="MutableInterfaceType" Name="IDisposable" NeedsToBeDirectParent="true" />
+                <Choice Kind="OperationCallFlag" Name="Dispose" />
+              </p:NodeReference>
+              <Pin Id="FAKmlsHeJozL7Wvyd41R6d" Name="Input" Kind="StateInputPin" />
+              <Pin Id="ULZupx5SGMlLHxZN7y1ROX" Name="Output" Kind="StateOutputPin" />
+            </Node>
           </Canvas>
           <ProcessDefinition Id="JovXn9MbRGEPr9NxFwwXHZ" HasStateOut="true">
             <Fragment Id="QXyl7VQyDhoOGBtmCPqRyZ" Patch="L608uHeaBCbLEGVBeQGDkJ" Enabled="true" />
@@ -1573,50 +1676,6 @@
           <Link Id="ROwSAnfGkkjO0EV2GKz88J" Ids="QwDNO7oNKWaLSV0fBXZh8c,Gb1GTr6EuC4L11SocMM2kp" />
           <Link Id="LceaiRt4FPcOL07iMiXXea" Ids="PwTdbFvOQcnNINrLHk1icK,LCDapNHQnAYLLR0Gw4Kagb" />
           <Link Id="QzXLI8bOLw7LZBwPcYoa9K" Ids="AJsfbbBIzcAQDl7wk0Vdxo,PwTdbFvOQcnNINrLHk1icK" IsHidden="true" />
-          <Patch Id="L608uHeaBCbLEGVBeQGDkJ" Name="Create (Internal)" ParticipatingElements="AwcggvnSWpHNN2ZIdlUS4E" />
-          <Patch Id="DcGI255mFzZLLd56GRfNIe" Name="Update (Internal)" ManuallySortedPins="true">
-            <Pin Id="PfrpitP54HtM2eTmEzYrIr" Name="Listener IP" Kind="InputPin" DefaultValue="0.0.0.0">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="String" />
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="NADA864zdI3Mqm7aIzAK9b" Name="Port" Kind="InputPin" DefaultValue="4444">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Integer32" />
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="KjA4EwsJ2pNPjO7OcUKfjq" Name="Enabled" Kind="InputPin" Bounds="594,192" DefaultValue="True">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Boolean" />
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="UBpbT8SSkBnOIWmAH86TgS" Name="Data" Kind="OutputPin" Bounds="301,941" />
-            <Pin Id="DHYBrNLwchNNf8RDlFNIvL" Name="Clients" Kind="OutputPin" Bounds="589,694" />
-            <Pin Id="LKOQ5VSZHydMthKWxLg2E5" Name="Statistics" Kind="OutputPin" Bounds="742,688" />
-            <Pin Id="A37KlOCpT0TQOibuLExJeC" Name="Is Listening" Kind="OutputPin" />
-          </Patch>
-          <Patch Id="Hq4kuf70COoPplD3XuDkX9" Name="Dispose (Internal)" />
-          <Patch Id="FmHd7ZuIrsyPOAalw8W1sN" Name="SendString">
-            <Pin Id="FVoCPDHXCyPOBIcVNH4N8J" Name="Client" Kind="InputPin" Summary="Specify as IP:Port" />
-            <Pin Id="OEGnVhidatcQUGUJlQ2vHe" Name="Data" Kind="InputPin" />
-            <Pin Id="NX3L11PgZHkOT5UqTmMTws" Name="Terminator" Kind="InputPin" Bounds="1088,535" DefaultValue="&#xD;&#xA;" Summary="Defaults to CRLF, also known as #13#10 or \r\n" />
-            <Pin Id="UP6TBHZyN6oLb7qj7prFRR" Name="Encoding" Kind="InputPin" />
-            <Pin Id="AB9FDG4SLPNQYxinBkIlfZ" Name="Apply" Kind="InputPin" Bounds="1193,510" />
-          </Patch>
-          <Patch Id="EfbG5E6TaMvM9yYw0nLiDZ" Name="SendData" ManuallySortedPins="true">
-            <Pin Id="TdbHEdKuQQeLxduACl5wP6" Name="Client" Kind="InputPin" Summary="Specify as IP:Port" />
-            <Pin Id="CSBz5vOSd8YLwIGHgQtImx" Name="Data" Kind="InputPin">
-              <p:TypeAnnotation>
-                <Choice Kind="TypeFlag" Name="IReadOnlyList" />
-                <p:TypeArguments>
-                  <TypeReference>
-                    <Choice Kind="TypeFlag" Name="Byte" />
-                  </TypeReference>
-                </p:TypeArguments>
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="AJsfbbBIzcAQDl7wk0Vdxo" Name="Apply" Kind="InputPin" Bounds="1111,808" />
-          </Patch>
           <Link Id="G2OU6WjYkKVQX8Bmvd6RXO" Ids="Lgh2KQ5y9gNPyceVGe2Jzi,MvfswzrrxrcQO4LwYFems3" />
           <Link Id="FfUkVPzqZXPOCbZSFndqfo" Ids="VjGGaEJE1YxPGpYQ3n47Y9,RvCT6gD8cfDPusEvUL0BuU" IsFeedback="true" />
           <Link Id="OLGptvMzzrLLC6k6S9JIuD" Ids="MvfswzrrxrcQO4LwYFems3,VjGGaEJE1YxPGpYQ3n47Y9" />
@@ -1643,6 +1702,62 @@
           <Link Id="VIa4tbvWUcJNTG8LQ4cbtA" Ids="G5lp8PluOKhMHwkCIBR4Ee,JyQaXfgpvxRPR2S9EdEQqG" />
           <Link Id="Uw8U7MRsakwMEDdmBqq2oT" Ids="JyQaXfgpvxRPR2S9EdEQqG,CvPNl4c5WRSPrSodOQ23Sc" />
           <Link Id="RdBk7mFPGNtL0tCsJkU3kx" Ids="JyQaXfgpvxRPR2S9EdEQqG,EONOmWNqrBgPUj5tM4BPjY" />
+          <Patch Id="L608uHeaBCbLEGVBeQGDkJ" Name="Create (Internal)" ParticipatingElements="AwcggvnSWpHNN2ZIdlUS4E,KLodrYy2eEpN6SMe9T1v5Z" />
+          <Patch Id="DcGI255mFzZLLd56GRfNIe" Name="Update (Internal)" ManuallySortedPins="true">
+            <Pin Id="PfrpitP54HtM2eTmEzYrIr" Name="Listener IP" Kind="InputPin" DefaultValue="0.0.0.0">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="NADA864zdI3Mqm7aIzAK9b" Name="Port" Kind="InputPin" DefaultValue="4444">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                <Choice Kind="TypeFlag" Name="Integer32" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="KjA4EwsJ2pNPjO7OcUKfjq" Name="Enabled" Kind="InputPin" Bounds="594,192" DefaultValue="True">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="UBpbT8SSkBnOIWmAH86TgS" Name="Data" Kind="OutputPin" Bounds="301,941" />
+            <Pin Id="DHYBrNLwchNNf8RDlFNIvL" Name="Clients" Kind="OutputPin" Bounds="589,694" />
+            <Pin Id="LKOQ5VSZHydMthKWxLg2E5" Name="Statistics" Kind="OutputPin" Bounds="742,688" />
+            <Pin Id="A37KlOCpT0TQOibuLExJeC" Name="Is Listening" Kind="OutputPin" />
+          </Patch>
+          <Patch Id="Hq4kuf70COoPplD3XuDkX9" Name="Dispose (Internal)" ParticipatingElements="VpUyMZOUwaYPWQPqep4wHa" />
+          <Patch Id="FmHd7ZuIrsyPOAalw8W1sN" Name="SendString">
+            <Pin Id="FVoCPDHXCyPOBIcVNH4N8J" Name="Client" Kind="InputPin" Summary="Specify as IP:Port" />
+            <Pin Id="OEGnVhidatcQUGUJlQ2vHe" Name="Data" Kind="InputPin" />
+            <Pin Id="NX3L11PgZHkOT5UqTmMTws" Name="Terminator" Kind="InputPin" Bounds="1088,535" DefaultValue="&#xD;&#xA;" Summary="Defaults to CRLF, also known as #13#10 or \r\n" />
+            <Pin Id="UP6TBHZyN6oLb7qj7prFRR" Name="Encoding" Kind="InputPin" />
+            <Pin Id="AB9FDG4SLPNQYxinBkIlfZ" Name="Apply" Kind="InputPin" Bounds="1193,510" />
+          </Patch>
+          <Patch Id="EfbG5E6TaMvM9yYw0nLiDZ" Name="SendData" ManuallySortedPins="true">
+            <Pin Id="TdbHEdKuQQeLxduACl5wP6" Name="Client" Kind="InputPin" Summary="Specify as IP:Port" />
+            <Pin Id="CSBz5vOSd8YLwIGHgQtImx" Name="Data" Kind="InputPin">
+              <p:TypeAnnotation LastCategoryFullName="Collections.Interfaces" LastDependency="VL.CoreLib.vl">
+                <Choice Kind="TypeFlag" Name="IReadOnlyList" />
+                <p:TypeArguments>
+                  <TypeReference>
+                    <Choice Kind="TypeFlag" Name="Byte" />
+                  </TypeReference>
+                </p:TypeArguments>
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="AJsfbbBIzcAQDl7wk0Vdxo" Name="Apply" Kind="InputPin" Bounds="1111,808" />
+          </Patch>
+          <Link Id="EZ6UyFFYdWXQHREiKUb7ik" Ids="SCMyKMnJmCFP1j3MK2fGj0,E4m7CdhwjskPp928aT6RK5" />
+          <Link Id="P4mPVgztLCQNGRR3wsMY74" Ids="NDD9sA1xRwiPOeLrdnA1JH,DCNbQgs5yQoO0VcEmt2dsX" />
+          <Link Id="AVN9pgtyGI4PTg3cVhlDHw" Ids="SCMyKMnJmCFP1j3MK2fGj0,GbN7GKaqY9OLiWFhdJUfUz" />
+          <Link Id="UVzqkDA5MmPM21HDnXDufU" Ids="AwHKi0uOBT1OQViMpS2KiQ,I65X5PslZm7McuQbtvE48p" />
+          <Link Id="Vi7jAq8AGZpMi1m6jHQgOa" Ids="A9FAVmr18wpMofk3Fz7UC4,Cu7GcRpkaroNZGBc3G9POd" />
+          <Link Id="DkZXlHpPsGlPhN3IiLKALg" Ids="Cu7GcRpkaroNZGBc3G9POd,FAKmlsHeJozL7Wvyd41R6d" />
+          <Link Id="QbgB0z4MCEEPBhs1Yuo6Mh" Ids="Cu7GcRpkaroNZGBc3G9POd,GvTyNoTQ6KCLx529nRSY6E" />
+          <Link Id="ThGsU78eMK8LTAduk4Xhsx" Ids="O8V5JAf1QQlLago6KnJtMG,ECDrXt9KCVOQEGXPgxJCnw" />
+          <Link Id="GVtOFnYNiZyOsrJFVK9Hv6" Ids="DpeNS4WAjmrNqfdvIpPqAO,P64BgtHDwBNMY2EFKEPA3C" />
+          <Link Id="HJp827SDtzSOYlooOKFLqD" Ids="JHvyCHfVvfcQDIwM5Fn0Sv,QBBxAy3bPA5M5rcIEblVfI" IsFeedback="true" />
+          <Link Id="SRhki7evoIuQbE3kCxrYoh" Ids="BSk1JBW7UPqO80rUFLnrAd,JHvyCHfVvfcQDIwM5Fn0Sv" />
+          <Link Id="FdM8Mu42oGoOYKV4UMUxAH" Ids="Cu7GcRpkaroNZGBc3G9POd,Ph3VVHKPTUbLRN2dlnyn0G" />
         </Patch>
       </Node>
       <Pad Id="RJAJDZFibKRNyk9ryOIXGz" Bounds="188,142,281,17" ShowValueBox="true" isIOBox="true" Value="https://github.com/jchristn/SuperSimpleTcp">
@@ -1655,7 +1770,7 @@
         </p:ValueBoxSettings>
       </Pad>
       <Pad Id="CAZCNOu2fIqPmhMGyt8MnU" Bounds="188,123,162,19" ShowValueBox="true" isIOBox="true" Value="This is a wrapper around:">
-        <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+        <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="CoreLibBasics.vl">
           <Choice Kind="TypeFlag" Name="String" />
         </p:TypeAnnotation>
         <p:ValueBoxSettings>
@@ -1670,12 +1785,12 @@
 
 -->
         <Node Name="ValidateInputs" Bounds="400,294,286,218" Id="HLJ18C08vxMLoprgyn0quJ">
-          <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+          <p:NodeReference LastCategoryFullName="Primitive" LastDependency="builtin">
             <Choice Kind="OperationDefinition" Name="Operation" />
           </p:NodeReference>
           <Patch Id="IKq0P5tafhzOGTD63JnhEA">
             <Node Bounds="412,357,65,19" Id="GZVgxVx0MU0N1qCE7P1LOs">
-              <p:NodeReference LastCategoryFullName="Primitive.Object" LastSymbolSource="CoreLibBasics.vl">
+              <p:NodeReference LastCategoryFullName="Primitive.Object" LastDependency="VL.CoreLib.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="OperationCallFlag" Name="IsAssigned" />
               </p:NodeReference>
@@ -1684,7 +1799,7 @@
               <Pin Id="AWAnm8DAmQfMyZEEYgK82f" Name="Not Assigned" Kind="OutputPin" />
             </Node>
             <Node Bounds="593,366,81,19" Id="HJQTkYn7MENLG4xCuOTTbq">
-              <p:NodeReference LastCategoryFullName="Primitive.String" LastSymbolSource="CoreLibBasics.vl">
+              <p:NodeReference LastCategoryFullName="Primitive.String" LastDependency="VL.CoreLib.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="OperationCallFlag" Name="IsNullOrEmpty" />
               </p:NodeReference>
@@ -1692,7 +1807,7 @@
               <Pin Id="OwjW2023JzfMRGkIXL8fPR" Name="Result" Kind="OutputPin" />
             </Node>
             <Node Bounds="592,402,37,19" Id="B5UpelUycHYPOllaylYjDn">
-              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="CoreLibBasics.vl">
+              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastDependency="VL.CoreLib.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="OperationCallFlag" Name="NOT" />
               </p:NodeReference>
@@ -1700,7 +1815,7 @@
               <Pin Id="NeqXvDQxYKmOqfIPvlj2sO" Name="Output" Kind="StateOutputPin" />
             </Node>
             <Node Bounds="498,367,81,19" Id="QdRBUabKkQ3OTWbtmSfkRG">
-              <p:NodeReference LastCategoryFullName="Primitive.String" LastSymbolSource="CoreLibBasics.vl">
+              <p:NodeReference LastCategoryFullName="Primitive.String" LastDependency="VL.CoreLib.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="OperationCallFlag" Name="IsNullOrEmpty" />
               </p:NodeReference>
@@ -1708,7 +1823,7 @@
               <Pin Id="OyhgNQrBcYeLWcILbdDafV" Name="Result" Kind="OutputPin" />
             </Node>
             <Node Bounds="497,403,37,19" Id="OZS6ak48euROGUbKtJcTyG">
-              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="CoreLibBasics.vl">
+              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastDependency="VL.CoreLib.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="OperationCallFlag" Name="NOT" />
               </p:NodeReference>
@@ -1730,7 +1845,7 @@
             <Pin Id="H2Y8Yemi6gUL0j4bsq9NDX" Name="Data" Kind="InputPin" Bounds="1459,491" />
             <Link Id="TotPcOqy30KNNAxxInPICA" Ids="H2Y8Yemi6gUL0j4bsq9NDX,DErcBwLNKGlMDzMaZnJjV4" IsHidden="true" />
             <Node Bounds="432,449,45,19" Id="O5ef5KjJNbgNUWEzWBmWwT">
-              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="CoreLibBasics.vl">
+              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastDependency="VL.CoreLib.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="OperationCallFlag" Name="AND" />
               </p:NodeReference>
@@ -1754,12 +1869,12 @@
 
 -->
         <Node Name="ValidateInputs (Data)" Bounds="404,584,244,202" Id="IiOM61VdNTqL5PAI34eNeX">
-          <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+          <p:NodeReference LastCategoryFullName="Primitive" LastDependency="builtin">
             <Choice Kind="OperationDefinition" Name="Operation" />
           </p:NodeReference>
           <Patch Id="Enfhzsy3EY9MDJasaNSP63" IsGeneric="true">
             <Node Bounds="416,661,65,19" Id="RdZARA2GvhYQUsYbJJPjZO">
-              <p:NodeReference LastCategoryFullName="Primitive.Object" LastSymbolSource="CoreLibBasics.vl">
+              <p:NodeReference LastCategoryFullName="Primitive.Object" LastDependency="VL.CoreLib.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="OperationCallFlag" Name="IsAssigned" />
               </p:NodeReference>
@@ -1768,7 +1883,7 @@
               <Pin Id="JsowUbtt6R8QXGz5w0mKsr" Name="Not Assigned" Kind="OutputPin" />
             </Node>
             <Node Bounds="502,641,81,19" Id="MDy42hpMbJXLV6tNuqs8tS">
-              <p:NodeReference LastCategoryFullName="Primitive.String" LastSymbolSource="CoreLibBasics.vl">
+              <p:NodeReference LastCategoryFullName="Primitive.String" LastDependency="VL.CoreLib.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="OperationCallFlag" Name="IsNullOrEmpty" />
               </p:NodeReference>
@@ -1776,7 +1891,7 @@
               <Pin Id="EBnccy7Ul5ZOxMgyq6zny9" Name="Result" Kind="OutputPin" />
             </Node>
             <Node Bounds="501,677,37,19" Id="Is3ca53CHegMSlGat66Z3f">
-              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="CoreLibBasics.vl">
+              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastDependency="VL.CoreLib.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="OperationCallFlag" Name="NOT" />
               </p:NodeReference>
@@ -1796,7 +1911,7 @@
             <Pin Id="Qa3uWcN6sbLQbi9Dx6wxNP" Name="Data" Kind="InputPin" Bounds="1459,491" />
             <Link Id="M6PWAHk5EbWL9OwOhxXwgS" Ids="Qa3uWcN6sbLQbi9Dx6wxNP,GbiV5M75HIbQM2RT7PG4HJ" IsHidden="true" />
             <Node Bounds="436,723,45,19" Id="FJnDgi1V4OfLdeYE1LM6SX">
-              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="CoreLibBasics.vl">
+              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastDependency="VL.CoreLib.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="OperationCallFlag" Name="AND" />
               </p:NodeReference>
@@ -1813,7 +1928,7 @@
             <Link Id="UwSP26VLV63McKyuaBh2Rv" Ids="MWqy2g5O580N5TueH8B3na,Db33rXplallOVkYdme84Ol" IsHidden="true" />
             <Link Id="PSaebuyNBGeOg19KyLjEcE" Ids="GbiV5M75HIbQM2RT7PG4HJ,IYZGTiSuja5OkCaxT0DbPu" />
             <Node Bounds="601,678,34,19" Id="HcyIG0p72HJNjaKHkY8cut">
-              <p:NodeReference LastCategoryFullName="Collections.Sequence" LastSymbolSource="VL.Collections.vl">
+              <p:NodeReference LastCategoryFullName="Collections.Sequence" LastDependency="VL.CoreLib.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="OperationCallFlag" Name="Any" />
                 <CategoryReference Kind="MutableInterfaceType" Name="Sequence" NeedsToBeDirectParent="true" />
@@ -1835,7 +1950,7 @@
           <Choice Kind="ForwardDefinition" Name="Forward" />
           <FullNameCategoryReference ID="Primitive" />
         </p:NodeReference>
-        <p:TypeAnnotation LastCategoryFullName="SuperSimpleTcp" LastSymbolSource="SuperSimpleTcp.dll">
+        <p:TypeAnnotation LastCategoryFullName="SuperSimpleTcp" LastDependency="SuperSimpleTcp.dll">
           <Choice Kind="TypeFlag" Name="DataReceivedEventArgs" />
         </p:TypeAnnotation>
         <Patch Id="U9DpPNpxUmULe7DUkjOomE">
@@ -1846,13 +1961,13 @@
 
 -->
             <Node Name="Split" Bounds="594,265,248,185" Id="LL8rRHG409yO7OsaohZ0uM">
-              <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+              <p:NodeReference LastCategoryFullName="Primitive" LastDependency="builtin">
                 <Choice Kind="OperationDefinition" Name="Operation" />
               </p:NodeReference>
               <p:HideCategory p:Type="Boolean">false</p:HideCategory>
               <Patch Id="PAMk5qsZoPGK9bMNF3jEWC">
                 <Node Bounds="609,318" Id="UhKl194abtoMG9gIA7NxIi">
-                  <p:NodeReference LastCategoryFullName="SuperSimpleTcp.DataReceivedEventArgs" LastSymbolSource="SuperSimpleTcp.dll">
+                  <p:NodeReference LastCategoryFullName="SuperSimpleTcp.DataReceivedEventArgs" LastDependency="SuperSimpleTcp.dll">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="Data" />
                     <CategoryReference Kind="AssemblyCategory" Name="DataReceivedEventArgs" NeedsToBeDirectParent="true" />
@@ -1866,7 +1981,7 @@
                 <Link Id="HoHcZLK4l9sQCgz06abDVm" Ids="CkgR1IuWm4vP5NkazmRj6x,Mw8ZoCx3eZwNqJ4WnpH3eh" IsHidden="true" />
                 <Link Id="UhKC9cCXKtUOANo6wHj2yv" Ids="ObM9YOXkiwJMBM4oUTYfzb,OkVsaU2kd8IQX0SNlxevlk" />
                 <Node Bounds="606,379" Id="KMJ9F3k4u6iPq6NKt7oNBA">
-                  <p:NodeReference LastCategoryFullName="SuperSimpleTcp.DataReceivedEventArgs" LastSymbolSource="SuperSimpleTcp.dll">
+                  <p:NodeReference LastCategoryFullName="SuperSimpleTcp.DataReceivedEventArgs" LastDependency="SuperSimpleTcp.dll">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="IpPort" />
                     <CategoryReference Kind="AssemblyCategory" Name="DataReceivedEventArgs" NeedsToBeDirectParent="true" />
@@ -1898,28 +2013,17 @@
 
 -->
       <Node Name="AsBytes (TCPMessage Advanced)" Bounds="404,397,85,125" Id="Fw9rlAmY3QyLl1pMGLSFPu">
-        <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+        <p:NodeReference LastCategoryFullName="Primitive" LastDependency="builtin">
           <Choice Kind="OperationDefinition" Name="Operation" />
         </p:NodeReference>
         <Patch Id="Rrx8r0gSb6fNrCZyKgBoEo" IsGeneric="true">
-          <Pin Id="RZBfVvj5cfJOBRoJg0hvKJ" Name="Input" Kind="InputPin" />
           <ControlPoint Id="L9jClznLT5vN9G7tvUYill" Bounds="418,415" />
           <Link Id="IHFC51pXKPGN1ibaBUHfT1" Ids="RZBfVvj5cfJOBRoJg0hvKJ,L9jClznLT5vN9G7tvUYill" IsHidden="true" />
-          <Pin Id="PdMoZxKFUFtL7Nm7cjQBJK" Name="Output" Kind="OutputPin">
-            <p:TypeAnnotation>
-              <Choice Kind="TypeFlag" Name="IReadOnlyList" />
-              <p:TypeArguments>
-                <TypeReference>
-                  <Choice Kind="TypeFlag" Name="Byte" />
-                </TypeReference>
-              </p:TypeArguments>
-            </p:TypeAnnotation>
-          </Pin>
           <ControlPoint Id="NrWKzZ6qAJmOUGjQZ8fXE7" Bounds="419,505" />
           <Link Id="TH7tU8BaweBOfN9dJtQ3m5" Ids="NrWKzZ6qAJmOUGjQZ8fXE7,PdMoZxKFUFtL7Nm7cjQBJK" IsHidden="true" />
           <Link Id="MD5YsAvxHoXNoMDbmcd9Jl" Ids="L9jClznLT5vN9G7tvUYill,ELrTiZp5UJjMeacoXEuF7h" />
           <Node Bounds="416,445,61,26" Id="TsKZdHCoErRQXbN3A2u89O">
-            <p:NodeReference LastCategoryFullName="IO.TCP.TCPMessage" LastSymbolSource="VL.IO.TCP.vl">
+            <p:NodeReference LastCategoryFullName="IO.TCP.TCPMessage" LastDependency="VL.IO.TCP.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <CategoryReference Kind="ClassType" Name="TCPMessage" />
               <Choice Kind="OperationCallFlag" Name="Data" />
@@ -1929,6 +2033,17 @@
             <Pin Id="FY3M0njueQMN8p4EMyrEWJ" Name="Data" Kind="OutputPin" />
           </Node>
           <Link Id="A0YHQZJMAkGMZ0QA423ax3" Ids="FY3M0njueQMN8p4EMyrEWJ,NrWKzZ6qAJmOUGjQZ8fXE7" />
+          <Pin Id="RZBfVvj5cfJOBRoJg0hvKJ" Name="Input" Kind="InputPin" />
+          <Pin Id="PdMoZxKFUFtL7Nm7cjQBJK" Name="Output" Kind="OutputPin">
+            <p:TypeAnnotation LastCategoryFullName="Collections.Interfaces" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="IReadOnlyList" />
+              <p:TypeArguments>
+                <TypeReference>
+                  <Choice Kind="TypeFlag" Name="Byte" />
+                </TypeReference>
+              </p:TypeArguments>
+            </p:TypeAnnotation>
+          </Pin>
         </Patch>
       </Node>
     </Canvas>
@@ -1953,8 +2068,9 @@
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="VzA3qsgMviuOHda3pudJsi" Location="VL.Skia" Version="2021.4.10" />
+  <NugetDependency Id="VzA3qsgMviuOHda3pudJsi" Location="VL.Skia" Version="2023.5.2" />
   <PlatformDependency Id="OMAZZuYHjm8NLhrCtTZKjV" Location="System.Runtime" />
   <PlatformDependency Id="H3Hxx3xjBWTLZsannuDFPd" Location="mscorlib" />
-  <NugetDependency Id="E8k5FgbIM9bNpeiZCJNOyr" Location="SuperSimpleTcp" Version="3.0.0" />
+  <NugetDependency Id="DGHSkH5wc8iLgpSgfOHuV6" Location="SuperSimpleTcp" Version="3.0.13" />
+  <PlatformDependency Id="UCbJr9N6FGdLpoffrs5KRQ" Location="../../vvvv/VL.StandardLibs/VL.IO.OSCQuery/lib/net6.0/vrc-oscquery-lib.dll" />
 </Document>
