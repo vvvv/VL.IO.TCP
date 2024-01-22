@@ -1455,7 +1455,7 @@
             <Pin Id="OtL4EjngCyPMSaRtJWjqWj" Name="Apply" Kind="InputPin" Bounds="925,1169" />
           </Patch>
           <Patch Id="AqRvq7BuOT9MBRgSnDNrhh" Name="Start (Internal)" ParticipatingElements="AWmakQlcKj0OS6LEEJtHey" />
-          <Patch Id="ILabSgHF5InLNB1yh9tQS4" Name="Stop (Internal)" />
+          <Patch Id="ILabSgHF5InLNB1yh9tQS4" Name="Stop (Internal)" ParticipatingElements="SIRuceBisePPahYlH92fTV" />
           <Patch Id="Nu3bjIV2PI2OVtVphK5836" Name="Receive" ParticipatingElements="FWH4gWKa37VOnsHxmeUNSp">
             <Pin Id="IhvHH1k0kB7QdGIxpuPbmp" Name="Data" Kind="OutputPin" />
             <Pin Id="RcK4A9N3bzPMxAidUrW30H" Name="Is Connected" Kind="OutputPin" />
@@ -2621,7 +2621,7 @@
             <Pin Id="D3WbXvSBXnHOF0KEiKgbUx" Name="Apply" Kind="InputPin" Bounds="1111,808" />
           </Patch>
           <Patch Id="GfAORY7P9cbLg2ZpK6dg0F" Name="Start (Internal)" ParticipatingElements="RySA73jvCjtM8xu5xxkYxa" />
-          <Patch Id="NA5qrRSqwtvQcSMYgSSDOZ" Name="Stop (Internal)" />
+          <Patch Id="NA5qrRSqwtvQcSMYgSSDOZ" Name="Stop (Internal)" ParticipatingElements="FfBH6lK1JkPMc239AncXv2" />
           <Patch Id="A9lH5G6P3qbNF7lmejWAwY" Name="Receive (Internal)">
             <Pin Id="SHycCr8deUFQbUjFxSPlb5" Name="Data" Kind="OutputPin" />
             <Pin Id="ADEEelxEahOQdJfE8zQrx4" Name="Clients" Kind="OutputPin" />
