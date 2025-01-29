@@ -2,18 +2,18 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
   <metadata>
     <id>VL.IO.TCP</id>
-    <version>0.5.1-alpha</version>
+    <version>0.6.0</version>
     <title>VL.IO.TCP</title>
     <authors>vvvv, Joel Christner</authors>
     <owners>vvvv</owners>
     <projectUrl>https://github.com/vvvv/VL.IO.TCP</projectUrl>
+    <repository type="git" url="https://github.com/vvvv/VL.IO.TCP.git"/>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <summary>TCP for VL</summary>
     <description>TCP for VL</description>
     <tags>VL, network, tcp</tags>
     <license type="expression">MIT</license>
 	<dependencies>
-		<dependency id="SuperSimpleTCP" version="3.0.13" />
+		<dependency id="SuperSimpleTCP" version="3.0.17" />
     </dependencies>
     <icon>icon\nugeticon.png</icon>
   </metadata>
