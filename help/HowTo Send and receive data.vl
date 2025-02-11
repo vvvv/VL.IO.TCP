@@ -21,6 +21,7 @@
               <Choice Kind="ProcessNode" Name="TCPClient" />
               <CategoryReference Kind="Category" Name="TCP" NeedsToBeDirectParent="true" />
             </p:NodeReference>
+            <p:HelpFocus p:Assembly="VL.Lang" p:Type="VL.Model.HelpPriority">High</p:HelpFocus>
             <Pin Id="KLblbOj8nDkOnEOSTk88oc" Name="Node Context" Kind="InputPin" IsHidden="true" />
             <Pin Id="L1MbmkI9XgVP5Wyc5ClWuO" Name="Server" Kind="InputPin" />
             <Pin Id="TxEQ5W7Gm8jQQPHIJrnwQQ" Name="Port" Kind="InputPin" DefaultValue="4446" />
@@ -36,12 +37,13 @@
             <Pin Id="MA1lfLEhHQ1QDkK2Yn6U1s" Name="Send Queue Length" Kind="OutputPin" />
           </Node>
           <Pad Id="J0qIPu30mxBPfHzEbcaQNa" Comment="Is Connected" Bounds="211,308,35,35" ShowValueBox="true" isIOBox="true" />
-          <Node Bounds="864,250,85,19" Id="IY2uRyn63skOmFQNHEvan8">
+          <Node Bounds="864,250,105,19" Id="IY2uRyn63skOmFQNHEvan8">
             <p:NodeReference LastCategoryFullName="IO.TCP" LastDependency="VL.IO.TCP.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="TCPServer" />
               <CategoryReference Kind="Category" Name="TCP" NeedsToBeDirectParent="true" />
             </p:NodeReference>
+            <p:HelpFocus p:Assembly="VL.Lang" p:Type="VL.Model.HelpPriority">High</p:HelpFocus>
             <Pin Id="Ftll44JA6iQQYDtz9NtLt4" Name="Node Context" Kind="InputPin" IsHidden="true" />
             <Pin Id="UfyzmRMNtN1Nhol25rn2Xa" Name="Listener IP" Kind="InputPin" />
             <Pin Id="JbIpsk8M2AWNRI5r1Gdspy" Name="Port" Kind="InputPin" DefaultValue="4446" />
